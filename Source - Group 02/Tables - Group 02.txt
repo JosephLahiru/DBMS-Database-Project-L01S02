@@ -1,0 +1,157 @@
+CREATE TABLE `admin` (
+  `admin_id` char(8) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  `role` varchar(20) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`admin_id`)
+);
+
+CREATE TABLE `assessments` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `assessment_1` float DEFAULT NULL,
+  `assessment_2` float DEFAULT NULL,
+  `assessment_3` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`),
+  KEY `course_id_ass_idx` (`course_id`),
+  CONSTRAINT `course_id_ass` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_ass` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- attendance-status => 1 - present, 0 - absent 
+
+CREATE TABLE `attendance` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `type` char(1) NOT NULL,
+  `date` date NOT NULL,
+  `status` char(1) NOT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`,`date`,`type`),
+  KEY `course_id_idx` (`course_id`),
+  CONSTRAINT `course_id_at` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_at` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+CREATE TABLE `course` (
+  `course_id` varchar(7) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `credits` int DEFAULT NULL,
+  `course_desc` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`course_id`)
+);
+
+CREATE TABLE `course_and_lecturer` (
+  `course_id` varchar(7) NOT NULL,
+  `lec_id` char(8) NOT NULL,
+  PRIMARY KEY (`course_id`,`lec_id`),
+  KEY `lec_id_idx` (`lec_id`),
+  KEY `lec_id` (`lec_id`),
+  CONSTRAINT `course_id_cl` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `lec_id_cl` FOREIGN KEY (`lec_id`) REFERENCES `lecturer` (`lec_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- course_and_student-status => P- Proper, S - Suspend, R - Repeat
+
+CREATE TABLE `course_and_student` (
+  `course_id` varchar(7) NOT NULL,
+  `stu_id` char(11) NOT NULL,
+  `status` char(1) NOT NULL,
+  PRIMARY KEY (`course_id`,`stu_id`),
+  KEY `stu_id_cs_idx` (`stu_id`),
+  CONSTRAINT `course_id_cs` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_cs` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `demo` (
+  `demo_id` char(9) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `contact_no` char(10) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`demo_id`)
+);
+
+CREATE TABLE `end_exam_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `end_exam_theory` float NOT NULL,
+  `end_exam_practical` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`),
+  KEY `course_id_idx` (`course_id`),
+  CONSTRAINT `course_id_eem` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_eem` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `lecturer` (
+  `lec_id` char(8) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  `contact_no` char(10) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  PRIMARY KEY (`lec_id`)
+);
+
+CREATE TABLE `medicals` (
+  `medical_id` char(8) NOT NULL,
+  `stu_id` char(11) NOT NULL,
+  `issue_date` date DEFAULT NULL,
+  PRIMARY KEY (`medical_id`,`stu_id`),
+  KEY `stu_id_med_idx` (`stu_id`),
+  CONSTRAINT `stu_id_med` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `mid_exam_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `mid_theory` float NOT NULL,
+  `mid_practical` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`),
+  KEY `course_id_idx` (`course_id`),
+  CONSTRAINT `course_id_mem` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_mem` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `quiz_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `quiz_1_marks` float NOT NULL,
+  `quiz_2_marks` float NOT NULL,
+  `quiz_3_marks` float NOT NULL,
+  `quiz_4_marks` float NOT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`),
+  KEY `course_id_idx` (`course_id`),
+  CONSTRAINT `course_id_qm` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `stu_id_qm` FOREIGN KEY (`stu_id`) REFERENCES `student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `student` (
+  `stu_id` char(11) NOT NULL,
+  `batch_no` varchar(3) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `contact_no` char(10) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  PRIMARY KEY (`stu_id`)
+);
+
+CREATE TABLE `t_o` (
+  `to_id` char(7) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `contact_no` char(10) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`to_id`)
+);

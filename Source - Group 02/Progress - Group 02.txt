@@ -1,0 +1,230 @@
+-- Your system should contain below user accounts => Done
+
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT ALL PRIVILEGES ON uni_mis.* TO 'Admin'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT ALL PRIVILEGES ON uni_mis.* TO 'Dean'@'localhost';
+
+CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT ALL PRIVILEGES ON uni_mis.* TO 'Lecturer'@'localhost';
+
+REVOKE CREATE USER ON uni_mis.* FROM 'Lecturer'@'localhost';
+
+CREATE USER 'Demonstrator'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT SELECT, SHOW VIEW ON uni_mis.* TO 'Lecturer'@'localhost';
+
+CREATE USER 'Tecnical_Officer'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT SELECT, SHOW VIEW, UPDATE, INSERT ON uni_mis.`attendance` to 'Tecnical_Officer'@`localhost`;
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'F7Rw&Zkd85!9,Mbq';
+
+GRANT SELECT, SHOW VIEW ON uni_mis.`attendance` to 'uni_mis'@`localhost`;
+
+GRANT SELECT, SHOW VIEW ON uni_mis.`quiz_marks` to 'uni_mis'@`localhost`;
+
+GRANT SELECT, SHOW VIEW ON uni_mis.`mid_exam_marks` to 'uni_mis'@`localhost`;
+
+GRANT SELECT, SHOW VIEW ON uni_mis.`end_exam_marks` to 'uni_mis'@`localhost`;
+
+-- Your system should include tables to store Quiz marks, Assessment Marks, Mid Semester marks(Practical and Theory), Final Marks(Practical and Theory) etc => Done
+
+CREATE TABLE `quiz_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `quiz_1_marks` float NOT NULL,
+  `quiz_2_marks` float NOT NULL,
+  `quiz_3_marks` float NOT NULL,
+  `quiz_4_marks` float NOT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`)
+);
+
+CREATE TABLE `assessments` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `assessment_1` float DEFAULT NULL,
+  `assessment_2` float DEFAULT NULL,
+  `assessment_3` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`)
+);
+
+CREATE TABLE `mid_exam_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `mid_theory` float NOT NULL,
+  `mid_practical` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`)
+);
+
+CREATE TABLE `end_exam_marks` (
+  `stu_id` char(11) NOT NULL,
+  `course_id` varchar(7) NOT NULL,
+  `end_exam_theory` float NOT NULL,
+  `end_exam_practical` float DEFAULT NULL,
+  PRIMARY KEY (`stu_id`,`course_id`)
+);
+
+-- Your system should include tables to store data about course modules = Done
+
+CREATE TABLE `course` (
+  `course_id` varchar(7) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `credits` int DEFAULT NULL,
+  `course_desc` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`course_id`)
+);
+
+-- Your system should include tables to store data about all the users Admin to Student
+
+CREATE TABLE admin( admin_id CHAR(8), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(6), role VARCHAR(20), email VARCHAR(50), PRIMARY KEY(admin_id));
+
+CREATE TABLE lecturer( lec_id CHAR(8) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(6), contact_no CHAR(10), address VARCHAR(50),  dob DATE, PRIMARY KEY(lec_id));
+
+CREATE TABLE student( stu_id CHAR(11) NOT NULL, batch_no VARCHAR(3), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(6), address VARCHAR(50), contact_no CHAR(10), dob DATE, age INT, PRIMARY KEY(stu_id));
+
+CREATE TABLE course( course_id CHAR(7) NOT NULL, name VARCHAR(50), credits INT, course_desc VARCHAR(50), PRIMARY KEY(course_id));
+
+CREATE TABLE t_o( to_id CHAR(7) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, gender CHAR(6), PRIMARY KEY(to_id));
+
+CREATE TABLE demo( demo_id CHAR(9) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, gender CHAR(6), PRIMARY KEY(demo_id));
+
+-- You should store data for at least 10 students, at least 04 lecturers, at least 04 instructors, at least 04 technical officers and other mentioned roles => Done
+-- You should store basic data for above roles including at least 04 different attributes => Done
+
+INSERT INTO QuizMarks
+VALUES("TG/2019/400", "ICT1113", 86.5, 72.3, 69.9, 43.2);
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1113", 86.5, 72.3, 69.9, 43.2),
+							("TG/2019/401", "ICT1113", 75.5, 32.9, 53.5, 71.1),
+							("TG/2019/402", "ICT1113", 98.58, 76.45, 86.12, 82.28),
+							("TG/2019/403", "ICT1113", 89.65, 68.72, 98.37, 77.05),
+							("TG/2019/404", "ICT1113", 57.35, 61.56, 47.46, 62.5),
+							("TG/2019/405", "ICT1113", 93.11, 94.81, 99.99, 71.26),
+							("TG/2019/406", "ICT1113", 74.21, 34.75, 98.84, 33.4),
+							("TG/2019/407", "ICT1113", 92.3, 91.15, 35.15, 55.03),
+							("TG/2019/408", "ICT1113", 84.09, 99.1, 44.62, 98.32),
+							("TG/2019/409", "ICT1113", 46.22, 33.36, 77.81, 62.05),
+							("TG/2019/400", "ICT1123", 36.27, 54.9, 28.8, 69.65),
+							("TG/2019/401", "ICT1123", 49.73, 94.22, 46.54, 55.7),
+							("TG/2019/402", "ICT1123", 63.49, 51.51, 28.38, 85.72),
+							("TG/2019/403", "ICT1123", 32.9, 86.02, 60.1, 88.43),
+							("TG/2019/404", "ICT1123", 39.41, 74.53, 20.42, 65.39),
+							("TG/2019/405", "ICT1123", 63.82, 65.39, 39.12, 93.05),
+							("TG/2019/406", "ICT1123", 36.97, 63.18, 74.26, 61.87),
+							("TG/2019/407", "ICT1123", 65.58, 58.31, 65.65, 58.31),
+							("TG/2019/408", "ICT1123", 41.02, 75.02, 45.81, 78.4),
+							("TG/2019/409", "ICT1123", 52.68, 76.94, 66.82, 57.89),
+							("TG/2019/400", "ICT1133", 55.94, 73.25, 38.19, 96.88),
+							("TG/2019/401", "ICT1133", 44.87, 97.28, 49.22, 83.68),
+							("TG/2019/402", "ICT1133", 78.71, 86.71, 50.06, 66.33),
+							("TG/2019/403", "ICT1133", 70.1, 72.19, 56.49, 83.03),
+							("TG/2019/404", "ICT1133", 51.22, 74.55, 54.02, 62.31),
+							("TG/2019/405", "ICT1133", 61.31, 70.31, 39.69, 99.42),
+							("TG/2019/406", "ICT1133", 51.46, 76.18, 42.67, 70.11),
+							("TG/2019/407", "ICT1133", 43.91, 77.68, 53.7, 59.43),
+							("TG/2019/408", "ICT1133", 56.07, 54.3, 41.53, 79.11),
+							("TG/2019/409", "ICT1133", 67.25, 50.82, 79.36, 61.37),
+							("TG/2019/400", "ICT1143", 62.45, 35.02, 57.56, 91.17),
+							("TG/2019/401", "ICT1143", 62.53, 32.26, 62.57, 92.07),
+							("TG/2019/402", "ICT1143", 64.36, 58.43, 32.77, 85.28),
+							("TG/2019/403", "ICT1143", 64.0, 46.65, 71.09, 77.23),
+							("TG/2019/404", "ICT1143", 56.17, 69.26, 56.41, 78.23),
+							("TG/2019/405", "ICT1143", 57.55, 38.19, 63.3, 84.68),
+							("TG/2019/406", "ICT1143", 79.04, 46.53, 34.98, 77.32),
+							("TG/2019/407", "ICT1143", 51.73, 52.51, 60.01, 81.08),
+							("TG/2019/408", "ICT1143", 78.59, 31.87, 61.17, 81.77),
+							("TG/2019/409", "ICT1143", 73.94, 64.29, 27.55, 53.21),
+							("TG/2019/400", "ICT1213", 53.66, 29.81, 49.61, 58.29),
+							("TG/2019/401", "ICT1213", 53.28, 24.64, 82.66, 62.91),
+							("TG/2019/402", "ICT1213", 54.27, 25.49, 75.63, 69.05),
+							("TG/2019/403", "ICT1213", 55.13, 29.84, 54.96, 55.85),
+							("TG/2019/404", "ICT1213", 58.97, 49.73, 49.23, 69.24),
+							("TG/2019/405", "ICT1213", 55.78, 35.02, 83.56, 68.24),
+							("TG/2019/406", "ICT1213", 51.44, 32.6, 45.99, 65.74),
+							("TG/2019/407", "ICT1213", 52.74, 37.78, 68.96, 59.71),
+							("TG/2019/408", "ICT1213", 51.64, 40.57, 62.39, 57.3),
+							("TG/2019/409", "ICT1213", 58.15, 35.04, 59.95, 60.4),
+							("TG/2019/400", "ICT1213", 54.23, 56.89, 60.67, 72.9),
+							("TG/2019/401", "ICT1213", 32.96, 59.69, 52.91, 76.74),
+							("TG/2019/402", "ICT1213", 47.32, 53.44, 54.49, 72.76),
+							("TG/2019/403", "ICT1213", 39.01, 56.0, 47.37, 61.07),
+							("TG/2019/404", "ICT1213", 32.86, 46.36, 57.82, 61.88),
+							("TG/2019/405", "ICT1213", 50.81, 51.09, 45.07, 67.21),
+							("TG/2019/406", "ICT1213", 40.66, 58.72, 69.97, 75.55),
+							("TG/2019/407", "ICT1213", 55.51, 52.99, 63.35, 63.01),
+							("TG/2019/408", "ICT1213", 31.29, 56.72, 46.61, 77.37),
+							("TG/2019/409", "ICT1213", 48.64, 48.48, 89.47, 71.62),
+							("TG/2019/400", "ICT1232", 49.72, 59.39, 66.61, 61.97),
+							("TG/2019/401", "ICT1232", 49.51, 55.77, 48.33, 72.64),
+							("TG/2019/402", "ICT1232", 56.91, 52.54, 58.21, 70.79),
+							("TG/2019/403", "ICT1232", 33.6, 55.61, 56.96, 61.52),
+							("TG/2019/404", "ICT1232", 50.2, 51.97, 72.47, 73.75),
+							("TG/2019/405", "ICT1232", 46.28, 50.6, 64.33, 66.82),
+							("TG/2019/406", "ICT1232", 52.57, 50.28, 51.47, 68.19),
+							("TG/2019/407", "ICT1232", 53.88, 45.24, 64.9, 69.43),
+							("TG/2019/408", "ICT1232", 50.35, 47.15, 77.23, 79.15),
+							("TG/2019/409", "ICT1232", 32.82, 59.68, 52.38, 66.65);
+
+
+INSERT INTO Course(course_id,name,credits,course_desc) 	VALUES	('ICT1113','Essential of ICT',03,'45 hrs including tutorials and presentations'),
+																('ICT1123','PC Application & Computer Laboratory',04,' Theory : 15 h ,Practical : 90 h'),
+																('ICT1133','Fundamentals of Program Concepts ',04,' Theory : 30 h ,Practical : 45 h'),
+																('ICT1143','Web Technologies',03,'Lecture Hours: 15 Practical Hours: 90'),
+																('ICT1213','Database Management',04,'Lecture Hours:2 per week '),
+																('ICT1232','Computer Laboratory',02,' Theory : 18 h ,Practical : 90 h');
+
+
+-- You should record attendance details for 06 subjects with 15 days => Done
+
+	-- If some student have submitted a medical for a day there should be a way to record it => Done
+
+	CREATE TABLE `medicals` (
+	  `medical_id` char(8) NOT NULL,
+	  `stu_id` char(11) NOT NULL,
+	  `issue_date` date DEFAULT NULL,
+	  PRIMARY KEY (`medical_id`,`stu_id`)
+	);
+
+	-- There should be a way to view attendance details as a summary for whole batch and as individuals => Done
+
+	SELECT * FROM attendance; -- whole batch
+	SELECT * FROM attendance WHERE stu_id = "TG/XXX/XXX"; -- individual
+
+-- You should record marks for the subjects as follows(All marks should be out of 100) => Done
+
+	-- There should be a way to view CA marks details as a summary for whole batch and as individuals => Done
+
+	SELECT * FROM ca_eligibility; -- whole batch
+	SELECT * FROM ca_eligibility WHERE stu_id = "TG/XXX/XXX"; -- individual
+
+	-- There should be a way to see if student/s are eligible according to the criteria of CA to sit for the final exam  => Done
+
+	SELECT stu_id, course_id, eligibility FROM ca_eligibility;
+
+-- There should be a way to check eligibility (attendance + CA marks) as individuals and for the whole batch => Done
+	
+	SELECT c.stu_id, c.course_id, c.eligibility AS ca_eligibility, a.eligebility AS attendance_eligibility FROM ca_eligibility c, attendance_eligibility a WHERE a.stu_id=c.stu_id AND a.course_id=c.course_id;
+
+-- There should be a way to see the final marks only for individuals and whole batch => Done
+
+	SELECT * FROM grades; -- whole batch
+	SELECT * FROM grades WHERE stu_id = "TG/XXX/XXX"; -- individual
+
+-- There should be a way to see marks for each subject, student and as a whole batch => Done
+
+	SELECT final_grades FROM grades WHERE course_id = "XXX/XXXX"; -- whole batch
+	SELECT final_grades FROM grades WHERE course_id = "XXX/XXXX" AND stu_id = "TG/XXX/XXX"; -- individual
+
+-- There should be a way to see Grades for each subject, student and as a whole batch => Done
+
+	SELECT grade_point FROM grades WHERE course_id = "XXX/XXXX"; -- whole batch
+	SELECT grade_point FROM grades WHERE course_id = "XXX/XXXX" AND stu_id = "TG/XXX/XXX"; -- individual
+
+-- There should be a way to see SGPA and CGPA with the subjects and grades for each student and for the whole batch => Done
+
+	SELECT * FROM sgpa;
+	-- Not enough data for cgpa

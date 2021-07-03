@@ -1,0 +1,279 @@
+Assessment Top Marks
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+
+
+CA_Eligibility
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+
+
+Final_Grade_Temp_Scaled
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp_scaled` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),
+            (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            NULL,
+            (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),
+            (`uni_mis`.`f`.`mid_marks` * (20 / 100)),
+            NULL) AS `mid_marks`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1143')),
+            (`e`.`end_exam_theory` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                (`e`.`end_exam_theory` * (50 / 100)),
+                IF(((`e`.`course_id` = 'ICT1123')
+                        OR (`e`.`course_id` = 'ICT1133')),
+                    (`e`.`end_exam_theory` * (40 / 100)),
+                    NULL))) AS `end_theory`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1123')
+                OR (`e`.`course_id` = 'ICT1133')),
+            (`e`.`end_exam_practical` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                NULL,
+                IF((`e`.`course_id` = 'ICT1143'),
+                    (`e`.`end_exam_practical` * (40 / 100)),
+                    NULL))) AS `end_practical`
+    FROM
+        (`uni_mis`.`final_grade_temp` `f`
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)
+            AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))
+
+
+Final_Grade_Temp
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp` AS
+    SELECT 
+        `uni_mis`.`q`.`stu_id` AS `stu_id`,
+        `uni_mis`.`q`.`course_id` AS `course_id`,
+        `uni_mis`.`q`.`avg` AS `quiz_marks`,
+        ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,
+        `uni_mis`.`m`.`overall` AS `mid_marks`,
+        `e`.`end_exam_theory` AS `end_exam_theory`,
+        `e`.`end_exam_practical` AS `end_exam_practical`
+    FROM
+        (((`uni_mis`.`quiz_mark_avgs` `q`
+        JOIN `uni_mis`.`assessment_top_marks` `a`)
+        JOIN `uni_mis`.`mid_exam_overall_marks` `m`)
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)
+            AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)
+            AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)
+            AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)
+            AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)
+            AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))
+
+
+Grades
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`grades` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),
+            `uni_mis`.`f`.`quiz_marks`,
+            0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            `uni_mis`.`f`.`assessment_marks`,
+            0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),
+            `uni_mis`.`f`.`mid_marks`,
+            0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),
+            `uni_mis`.`f`.`end_theory`,
+            0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),
+            `uni_mis`.`f`.`end_practical`,
+            0)) AS `final_grades`
+    FROM
+        `uni_mis`.`final_grade_temp_scaled` `f`
+
+
+Mid_Exam_Overall_Marks
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`mid_exam_overall_marks` AS
+    SELECT 
+        `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,
+        `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),
+            NULL) AS `mid_practical`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`
+    FROM
+        `uni_mis`.`mid_exam_marks`
+
+
+Quiz_Marks_Avarage
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)
+
+
+SGPA_Temp
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa_temp` AS
+    SELECT 
+        `uni_mis`.`g`.`stu_id` AS `stu_id`,
+        `uni_mis`.`g`.`course_id` AS `course_id`,
+        `uni_mis`.`g`.`final_grades` AS `final_grades`,
+        IF((`uni_mis`.`g`.`final_grades` >= 90),
+            10,
+            IF((`uni_mis`.`g`.`final_grades` >= 85),
+                9,
+                IF((`uni_mis`.`g`.`final_grades` >= 80),
+                    8.5,
+                    IF((`uni_mis`.`g`.`final_grades` >= 70),
+                        8,
+                        IF((`uni_mis`.`g`.`final_grades` >= 60),
+                            7,
+                            IF((`uni_mis`.`g`.`final_grades` >= 50),
+                                6,
+                                IF((`uni_mis`.`g`.`final_grades` >= 45),
+                                    5,
+                                    0))))))) AS `grade_point`
+    FROM
+        `uni_mis`.`grades` `g`
+
+SGPA
+
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa` AS
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/401" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/402" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/403" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/404" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/405" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/406" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/407" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/408" union all
+	SELECT `uni_mis`.`s`.`stu_id`, (SUM(`uni_mis`.`s`.`grade_point`*`uni_mis`.`c`.`credits`))/20 AS sgpa FROM `uni_mis`.`sgpa_temp` `s`, `uni_mis`.`course` `c` WHERE `uni_mis`.`s`.`course_id`=`uni_mis`.`c`.`course_id` AND s.stu_id="TG/2019/409";
+
+
+ATTENDANCE_ELIGIBILITY
+
+CREATE 
+	ALGORITHM=UNDEFINED 
+	DEFINER=`root`@`localhost` 
+	SQL SECURITY DEFINER 
+VIEW `uni_mis`.`attendance_eligibility` AS 
+	select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1113')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1123')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1133')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1143')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1213')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/400') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/401') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/402') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/403') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/404') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/405') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/406') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/407') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/408') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232')) union all 
+ select `uni_mis`.`attendance`.`stu_id` AS `stu_id`,`uni_mis`.`attendance`.`course_id` AS `course_id`,if(((sum(`uni_mis`.`attendance`.`status`) * (80 / 100)) > (15 * (80 / 100))),'eligeble','noteligeble') AS `eligebility` from `uni_mis`.`attendance` where ((`uni_mis`.`attendance`.`stu_id` = 'TG/2019/409') and (`uni_mis`.`attendance`.`course_id` = 'ICT1232'))

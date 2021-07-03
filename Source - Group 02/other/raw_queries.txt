@@ -1,0 +1,2205 @@
+_HiStOrY_V2_
+quit
+SHOW DATABASES;
+USE uni_mis;
+CREATE USER 'Dean'@'locahost
+';
+CREATE USER 'Dean'@'locahost\012';
+CREATE USER 'Dean'@'locahost'
+CREATE USER 'Lecturer'@'localhost'
+CREATE USER 'Demonstrator'@'localhost'
+CREATE USER 'Tecnical_Officer'@'localhost'
+CREATE USER 'Student'@'localhost'
+DROP USER 'Tecnical_Officer'@'localhost';
+CREATE USER 'Technical_Officer'@'localhost'
+DROP USER 'Dean'@'localhost';
+DROP USER 'Dean'@'locahost';
+CREATE TABLE Admin(
+admin_id CHAR(10),
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+gender CHAR(10),
+role VARCHAR(20),
+e-mail VARCHAR(20),
+PRIMARY KEY(admin_id));
+CREATE TABLE Admin( admin_id CHAR(10), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), role VARCHAR(20), e-mail VARCHAR(20), PRIMARY KEY(admin_id));
+CREATE TABLE Admin(
+CREATE TABLE Admin( admin_id CHAR(10), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), role VARCHAR(20), email VARCHAR(20), PRIMARY KEY(admin_id));
+CREATE TABLE Admin( CREATE TABLE Admin( admin_id CHAR(10), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), role VARCHAR(20), email VARCHAR(20), PRIMARY KEY(admin_id));
+CREATE TABLE Admin(
+admin_id CHAR(10),
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+gender CHAR(10),
+role VARCHAR(20),
+e-mail VARCHAR(20),
+PRIMARY KEY(admin_id));
+CREATE TABLE Admin( admin_id CHAR(10), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), role VARCHAR(20), e-mail VARCHAR(20), PRIMARY KEY(admin_id));
+CREATE TABLE Admin(
+admin_id CHAR(10),
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+gender CHAR(10),
+role VARCHAR(20),
+email VARCHAR(20),
+PRIMARY KEY(admin_id));
+CREATE TABLE Admin( admin_id CHAR(10), first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), role VARCHAR(20), email VARCHAR(20), PRIMARY KEY(admin_id));
+DESC Admin;
+CREATE TABLE Lecturer(
+lec_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+gender CHAR(10),
+course_id CHAR(10),
+contact_no CHAR(10),
+address VARCHAR(50),
+dob DATE,
+PRIMARY KEY(lec_id));
+CREATE TABLE Lecturer( lec_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), course_id CHAR(10), contact_no CHAR(10), address VARCHAR(50),  dob DATE, PRIMARY KEY(lec_id));
+CREATE TABLE Student(
+stu_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+gender CHAR(10),
+course_id CHAR(10),
+address VARCHAR(50),
+contact_no CHAR(10),
+dob DATE,
+age INT,
+PRIMARY KEY(stu_id));
+CREATE TABLE Student( stu_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), gender CHAR(10), course_id CHAR(10), address VARCHAR(50), contact_no CHAR(10), dob DATE, age INT, PRIMARY KEY(stu_id));
+CREATE TABLE Course(
+course_id CHAR(10) NOT NULL,
+name VARCHAR(50),
+credits INT,
+course_desc VARCHAR(50),
+PRIMARY KEY(course_id));
+CREATE TABLE Course( course_id CHAR(10) NOT NULL, name VARCHAR(50), credits INT, course_desc VARCHAR(50), PRIMARY KEY(course_id));
+CREATE TABLE TO(
+to_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+contact_no CHAR(10),
+address VARCHAR(50),
+age INT,
+dob DATE,
+PRIMARY KEY(to_id));
+CREATE TABLE TO( to_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, PRIMARY KEY(to_id));
+CREATE TABLE TO(
+to_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+contact_no CHAR(10),
+address VARCHAR(50),
+age INT,
+dob DATE,
+PRIMARY KEY(to_id));
+CREATE TABLE TO( to_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, PRIMARY KEY(to_id));
+CREATE TABLE T_O(
+to_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+contact_no CHAR(10),
+address VARCHAR(50),
+age INT,
+dob DATE,
+PRIMARY KEY(to_id));
+CREATE TABLE T_O( to_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, PRIMARY KEY(to_id));
+CREATE TABLE Demo(
+demo_id CHAR(10) NOT NULL,
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+role VARCHAR(20),
+contact_no CHAR(10),
+address VARCHAR(50),
+age INT,
+dob DATE,
+PRIMARY KEY(demo_id));
+CREATE TABLE Demo( demo_id CHAR(10) NOT NULL, first_name VARCHAR(20), last_name VARCHAR(20), role VARCHAR(20), contact_no CHAR(10), address VARCHAR(50), age INT, dob DATE, PRIMARY KEY(demo_id));
+exit
+SHOW DATABASES;
+use uni_mis
+SHOW TABLESl
+;
+SHOW TABLES;
+DESC Admin;
+exit
+SHOW DATABASES;
+SELECT * FROM mysql.user;
+SELECT name FROM mysql.user;
+SELECT User FROM mysql.user;
+clear
+SHOW TABLES;
+use unimis
+use uni_mis
+SHOW TABLES;
+SELECT * FROM Admin;
+SELECT * FROM Course;
+SELECT * FROM Demo;
+DESC Student;
+INSERT INTO Student
+quit
+show databases
+show databases;
+select uni_mis
+select uni_mis;
+clear
+select database uni_mis
+select database uni_mis;
+change database uni_mis;
+clear
+help
+show databases;
+cd uni_mis;
+select uni_mis;
+use uni_mis;
+show tables;
+select Admin;
+select *from Admin;
+select *from Course;
+DESC Admin;
+DESC T_O;
+DESC Student;
+desc Attendance;
+select *from lecture;
+select *from lecturer;
+select *from Lecturer;
+exit
+show databases;
+use uni_mis;
+show tables;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1113','Essential of ICT',03,'Time Duration:45 hrs including tutorials and presentations');
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1113','Essential of ICT',03,'45 hrs including tutorials and presentations');
+SELECT *FROM Course;
+DESC QuizMarks;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1123','PC Application & Computer Laboratory',04,' Theory : 15 h ,Practical : 90 h');
+SELECT *FROM Course;
+show tables;
+select *from male_student;
+select *from male_students;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1143','Web Technologies',03,'Lecture Hours: 15 Practical Hours: 90');
+SELECT *FROM Course;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1133','Fundamentals of Program Concepts ',04,' Theory : 30 h ,Practical : 45 h');
+SELECT *FROM Course;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1213','Database Management',04,' Lectures – 02 Hours per Week, Practical – 03 Hours per Week');
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1213','Database Management',04,'Lectures–02 Hours per Week,Practical-03 Hours per Week');
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1213','Database Management',04,'Lecture Hours:2 per week ');
+SELECT *FROM Course;
+desc Course;
+UPDATE Course
+SET course_desc=
+WHERE CustomerID=1;
+UPDATE Course SET course_desc= WHERE CustomerID=1;
+UPDATE Course
+SET course_desc=’Theory : 15 h ,Practical : 90 h’
+WHERE course_id=’ICT1123’;
+UPDATE Course SET course_desc=’Theory : 15 h ,Practical : 90 h’ WHERE course_id=’ICT1123’;
+UPDATE Course
+SET course_desc=’Theory : 15 h ,Practical : 90 h’
+WHERE course_id=’ICT1123’;
+UPDATE Course SET course_desc=’Theory : 15 h ,Practical : 90 h’ WHERE course_id=’ICT1123’;
+UPDATE Course
+SET course_desc='Theory : 15 h ,Practical : 90 h'
+WHERE course_id='ICT1123';
+UPDATE Course SET course_desc='Theory : 15 h ,Practical : 90 h' WHERE course_id='ICT1123';
+SELECT *FROM Course;
+UPDATE Course
+SET course_desc='Theory : 30 h ,Practical : 45 h'
+WHERE course_id='ICT1133';
+UPDATE Course SET course_desc='Theory : 30 h ,Practical : 45 h' WHERE course_id='ICT1133';
+SELECT *FROM Course;
+INSERT INTO Course(course_id,name,credits,course_desc) VALUES('ICT1232','Computer Laboratory',02,' Theory : 18 h ,Practical : 90 h');
+SELECT *FROM Course;
+UPDATE Course SET course_desc='Theory : 18 h ,Practical : 90 h' WHERE course_id='ICT1232';
+SELECT *FROM Course;
+desc Attendance;
+SELECT *FROM Attendance;
+SELECT *FROM Stusents;
+SELECT *FROM Student;
+desc Attendance;
+select *from Course;
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop" INTO TABLE Attendance
+FIELDS TERMINATED BY ''
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop" INTO TABLE Attendance FIELDS TERMINATED BY '' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 'ON';
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop" INTO TABLE Attendance
+FIELDS TERMINATED BY ''
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop" INTO TABLE Attendance FIELDS TERMINATED BY '' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ''
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY '' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+ set global local_infile=true;
+show global variables like 'local_infile';
+exit
+show databases;
+use uni_mis;
+clea
+clear
+show tables;
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+SHOW VARIABLES LIKE "secure_file_priv";
+load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/file.txt" into table test;
+load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/file.txt" into table Attendance;
+clear
+clear all;
+clear all
+show variables LIKE "secure_file_priv";
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+SHOW databases;
+use uni_mis;
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+exit
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+show databases;
+use uni_mis
+show databases;
+use uni_mis;
+show tables;
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C://Users//warun//Desktop//attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C://Users//warun//Desktop//attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+sudo vim /etc/my.cnf
+sudo vim /etc/my.cnf;
+set @@secure_file_priv = '';
+exit
+\134h
+show databases;
+use uni_mis;
+show tables;
+select *from Attendance;
+LOAD DATA INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE "C:/Users/warun/Desktop/attendance.csv" INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE 'C:/Users/warun/Desktop/attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE 'C:/Users/warun/Desktop/attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+secure_file_priv="";
+secure_file_priv=""
+LOAD DATA LOCAL INFILE 'C:/Users/warun/Desktop/attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE 'C:/Users/warun/Desktop/attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ',' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ' '
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ' ' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ' '
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA LOCAL INFILE 'C:\134\134Users\134\134warun\134\134Desktop\134\134attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ' ' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C://Users//warun//Desktop//attendance.csv' INTO TABLE Attendance
+FIELDS TERMINATED BY ' '
+LINES TERMINATED BY '\134n'
+(stu_id,course_id,@datevar,status)
+set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+LOAD DATA INFILE 'C://Users//warun//Desktop//attendance.csv' INTO TABLE Attendance FIELDS TERMINATED BY ' ' LINES TERMINATED BY '\134n' (stu_id,course_id,@datevar,status) set date=STR_TO_DATE(@datevar,'%Y/%m/%d');
+SHOW VARIABLES LIKE "secure_file_priv";
+show variables like "local_infile";
+load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/file.txt" into table test;
+load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/file.txt" into table Attendance;
+load data infile "C://ProgramData//MySQL//MySQL Server 8.0//Uploads//file.txt" into table Attendance;
+load data infile 'C://ProgramData//MySQL//MySQL Server 8.0//Uploads//file.txt' into table Attendance;
+SELECT @@GLOBAL.secure_file_priv;
+OAD DATA INFILE '/var/lib/mysql-files/attendance.csv'
+     INTO TABLE `Attendance`
+     COLUMNS TERMINATED BY ',' ENCLOSED BY '\134"'
+     LINES TERMINATED BY '\134n';
+OAD DATA INFILE '/var/lib/mysql-files/attendance.csv'      INTO TABLE `Attendance`      COLUMNS TERMINATED BY ',' ENCLOSED BY '\134"'      LINES TERMINATED BY '\134n';
+LOAD DATA INFILE '/var/lib/mysql-files/attendance.csv'
+     INTO TABLE `Attendance`
+     COLUMNS TERMINATED BY ',' ENCLOSED BY '\134"'
+     LINES TERMINATED BY '\134n';
+LOAD DATA INFILE '/var/lib/mysql-files/attendance.csv'      INTO TABLE `Attendance`      COLUMNS TERMINATED BY ',' ENCLOSED BY '\134"'      LINES TERMINATED BY '\134n';
+exit
+use uni_mis;
+SHOW TABLES;
+DESC QuizMarks;
+SHOW TABLES;
+DESC QuizMarks;
+SELECT * FROM student; SELECT * FROM course;
+SELECT * FROM student; SELECT * FROM Course;
+SELECT * FROM Student; SELECT * FROM Course;
+INSERT INTO QuizMarks
+VALUES("TG/2019/400", "ICT1113", 86.5, 72.3, 69.9, 43.2);
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1113", 86.5, 72.3, 69.9, 43.2);
+SELECT * FROM QuizMarks;
+INSERT INTO QuizMarks VALUES("TG/2019/401", "ICT1113", 75.5, 32.9, 53.5, 71.1);
+SELECT * FROM QuizMarks;
+SHOW TABLES;
+use uni_mis;
+INSERT INTO QuizMarks VALUES("TG/2019/402", "ICT1113", 98.58, 76.45, 86.12, 82.28),
+/2019/403", "ICT1113", 89.65, 68.72, 98.37, 77.05),
+("TG/2019/404", "ICT1113", 57.35, 61.56, 47.46, 62.5),
+G/2019/405", "ICT1113", 93.11, 94.81, 99.99, 71.26),
+TG/2019/406", "ICT1113", 74.21, 34.75, 98.84, 33.4),
+"TG/2019/407", "ICT1113", 92.3, 91.15, 35.15, 55.03),
+2019/408", "ICT1113", 84.09, 99.1, 44.62, 98.32),
+;
+INSERT INTO QuizMarks VALUES("TG/2019/402", "ICT1113", 98.58, 76.45, 86.12, 82.28), /2019/403", "ICT1113", 89.65, 68.72, 98.37, 77.05),\012("TG/2019/404", "ICT1113", 57.35, 61.56, 47.46, 62.5),\012G/2019/405", "ICT1113", 93.11, 94.81, 99.99, 71.26), TG/2019/406", "ICT1113", 74.21, 34.75, 98.84, 33.4),\012"TG/2019/407", "ICT1113", 92.3, 91.15, 35.15, 55.03),\0122019/408", "ICT1113", 84.09, 99.1, 44.62, 98.32),;
+INSERT INTO QuizMarks VALUES("TG/2019/402", "ICT1113", 98.58, 76.45, 86.12, 82.28),
+("TG/2019/403", "ICT1113", 89.65, 68.72, 98.37, 77.05);
+INSERT INTO QuizMarks VALUES("TG/2019/402", "ICT1113", 98.58, 76.45, 86.12, 82.28), ("TG/2019/403", "ICT1113", 89.65, 68.72, 98.37, 77.05);
+INSERT INTO QuizMarks VALUES("TG/2019/404", "ICT1113", 57.35, 61.56, 47.46, 62.5),
+("TG/2019/405", "ICT1113", 93.11, 94.81, 99.99, 71.26),("TG/2019/406", "ICT1113", 74.21, 34.75, 98.84, 33.4),("TG/2019/407", "ICT1113", 92.3, 91.15, 35.15, 55.03),("TG/2019/408", "ICT1113", 84.09, 99.1, 44.62, 98.32),("TG/2019/409", "ICT1113", 46.22, 33.36, 77.81, 62.05);
+INSERT INTO QuizMarks VALUES("TG/2019/404", "ICT1113", 57.35, 61.56, 47.46, 62.5), ("TG/2019/405", "ICT1113", 93.11, 94.81, 99.99, 71.26),("TG/2019/406", "ICT1113", 74.21, 34.75, 98.84, 33.4),("TG/2019/407", "ICT1113", 92.3, 91.15, 35.15, 55.03),("TG/2019/408", "ICT1113", 84.09, 99.1, 44.62, 98.32),("TG/2019/409", "ICT1113", 46.22, 33.36, 77.81, 62.05);
+SELECT * FROM QuizMarks;
+DESC Courses;
+DESC courses;
+SHOW TABLES;
+DESC Course;
+SELECT * FROM Course;
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1123", 36.27, 54.9, 28.8, 69.65),("TG/2019/401", "ICT1123", 49.73, 94.22, 46.54, 55.7),("TG/2019/402", "ICT1123", 63.49, 51.51, 28.38, 85.72),("TG/2019/403", "ICT1123", 32.9, 86.02, 60.1, 88.43),("TG/2019/404", "ICT1123", 39.41, 74.53, 20.42, 65.39),("TG/2019/405", "ICT1123", 63.82, 65.39, 39.12, 93.05),("TG/2019/406", "ICT1123", 36.97, 63.18, 74.26, 61.87),("TG/2019/407", "ICT1123", 65.58, 58.31, 65.65, 58.31),("TG/2019/408", "ICT1123", 41.02, 75.02, 45.81, 78.4),("TG/2019/409", "ICT1123", 52.68, 76.94, 66.82, 57.89);
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1133", 55.94, 73.25, 38.19, 96.88),("TG/2019/401", "ICT1133", 44.87, 97.28, 49.22, 83.68),("TG/2019/402", "ICT1133", 78.71, 86.71, 50.06, 66.33),("TG/2019/403", "ICT1133", 70.1, 72.19, 56.49, 83.03),("TG/2019/404", "ICT1133", 51.22, 74.55, 54.02, 62.31),("TG/2019/405", "ICT1133", 61.31, 70.31, 39.69, 99.42),("TG/2019/406", "ICT1133", 51.46, 76.18, 42.67, 70.11),("TG/2019/407", "ICT1133", 43.91, 77.68, 53.7, 59.43),("TG/2019/408", "ICT1133", 56.07, 54.3, 41.53, 79.11),("TG/2019/409", "ICT1133", 67.25, 50.82, 79.36, 61.37);
+SELECT * FROM QuizMarks;
+SELECT * FROM Course;
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1143", 62.45, 35.02, 57.56, 91.17),("TG/2019/401", "ICT1143", 62.53, 32.26, 62.57, 92.07),("TG/2019/402", "ICT1143", 64.36, 58.43, 32.77, 85.28),("TG/2019/403", "ICT1143", 64.0, 46.65, 71.09, 77.23),("TG/2019/404", "ICT1143", 56.17, 69.26, 56.41, 78.23),("TG/2019/405", "ICT1143", 57.55, 38.19, 63.3, 84.68),("TG/2019/406", "ICT1143", 79.04, 46.53, 34.98, 77.32),("TG/2019/407", "ICT1143", 51.73, 52.51, 60.01, 81.08),("TG/2019/408", "ICT1143", 78.59, 31.87, 61.17, 81.77),("TG/2019/409", "ICT1143", 73.94, 64.29, 27.55, 53.21);
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1213", 53.66, 29.81, 49.61, 58.29),("TG/2019/401", "ICT1213", 53.28, 24.64, 82.66, 62.91),("TG/2019/402", "ICT1213", 54.27, 25.49, 75.63, 69.05),("TG/2019/403", "ICT1213", 55.13, 29.84, 54.96, 55.85),("TG/2019/404", "ICT1213", 58.97, 49.73, 49.23, 69.24),("TG/2019/405", "ICT1213", 55.78, 35.02, 83.56, 68.24),("TG/2019/406", "ICT1213", 51.44, 32.6, 45.99, 65.74),("TG/2019/407", "ICT1213", 52.74, 37.78, 68.96, 59.71),("TG/2019/408", "ICT1213", 51.64, 40.57, 62.39, 57.3),("TG/2019/409", "ICT1213", 58.15, 35.04, 59.95, 60.4);
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1213", 54.23, 56.89, 60.67, 72.9),("TG/2019/401", "ICT1213", 32.96, 59.69, 52.91, 76.74),("TG/2019/402", "ICT1213", 47.32, 53.44, 54.49, 72.76),("TG/2019/403", "ICT1213", 39.01, 56.0, 47.37, 61.07),("TG/2019/404", "ICT1213", 32.86, 46.36, 57.82, 61.88),("TG/2019/405", "ICT1213", 50.81, 51.09, 45.07, 67.21),("TG/2019/406", "ICT1213", 40.66, 58.72, 69.97, 75.55),("TG/2019/407", "ICT1213", 55.51, 52.99, 63.35, 63.01),("TG/2019/408", "ICT1213", 31.29, 56.72, 46.61, 77.37),("TG/2019/409", "ICT1213", 48.64, 48.48, 89.47, 71.62);
+SHOW TABLES;
+INSERT INTO QuizMarks VALUES("TG/2019/400", "ICT1232", 49.72, 59.39, 66.61, 61.97),("TG/2019/401", "ICT1232", 49.51, 55.77, 48.33, 72.64),("TG/2019/402", "ICT1232", 56.91, 52.54, 58.21, 70.79),("TG/2019/403", "ICT1232", 33.6, 55.61, 56.96, 61.52),("TG/2019/404", "ICT1232", 50.2, 51.97, 72.47, 73.75),("TG/2019/405", "ICT1232", 46.28, 50.6, 64.33, 66.82),("TG/2019/406", "ICT1232", 52.57, 50.28, 51.47, 68.19),("TG/2019/407", "ICT1232", 53.88, 45.24, 64.9, 69.43),("TG/2019/408", "ICT1232", 50.35, 47.15, 77.23, 79.15),("TG/2019/409", "ICT1232", 32.82, 59.68, 52.38, 66.65)
+;
+SELECT * FROM QuizMarks;
+use uni_mis
+SHOW TABLES;
+SHOW DATABASES;
+USE uni_mis;
+SHOW TABLES;
+show databases;
+use uni_mis;
+show tables;
+select *from admin;
+select *from attendance;
+select *from course_&_lecturer;
+select *from  course_&_lecturer;
+select *from course_&_lecturer;
+show tables;
+select *from course_&_lecturer;
+select *from course_and_lecturer;
+desc course_and_student;
+select *from student;
+select *from student into outfile "C:\134\134export\134\134student.csv" fields terminated by ',' lines terminated by '\134n';
+SELECT *FROM course;
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113',' TG/2019/400'),
+('ICT1123',' TG/2019/400'),
+('ICT1133',' TG/2019/400'),
+('ICT1143',' TG/2019/400'),
+('ICT1213',' TG/2019/400'),
+('ICT1232',' TG/2019/400')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113',' TG/2019/400'), ('ICT1123',' TG/2019/400'), ('ICT1133',' TG/2019/400'), ('ICT1143',' TG/2019/400'), ('ICT1213',' TG/2019/400'), ('ICT1232',' TG/2019/400');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/400'),
+('ICT1123','TG/2019/400'),
+('ICT1133','TG/2019/400'),
+('ICT1143','TG/2019/400'),
+('ICT1213','TG/2019/400'),
+('ICT1232','TG/2019/400')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/400'), ('ICT1123','TG/2019/400'), ('ICT1133','TG/2019/400'), ('ICT1143','TG/2019/400'), ('ICT1213','TG/2019/400'), ('ICT1232','TG/2019/400');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/401'),
+('ICT1123','TG/2019/401'),
+('ICT1133','TG/2019/401'),
+('ICT1143','TG/2019/401'),
+('ICT1213','TG/2019/401'),
+('ICT1232','TG/2019/401')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/401'), ('ICT1123','TG/2019/401'), ('ICT1133','TG/2019/401'), ('ICT1143','TG/2019/401'), ('ICT1213','TG/2019/401'), ('ICT1232','TG/2019/401');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/402'),
+('ICT1123','TG/2019/402'),
+('ICT1133','TG/2019/402'),
+('ICT1143','TG/2019/402'),
+('ICT1213','TG/2019/402'),
+('ICT1232','TG/2019/402')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/402'), ('ICT1123','TG/2019/402'), ('ICT1133','TG/2019/402'), ('ICT1143','TG/2019/402'), ('ICT1213','TG/2019/402'), ('ICT1232','TG/2019/402');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/403'),
+('ICT1123','TG/2019/403'),
+('ICT1133','TG/2019/403'),
+('ICT1143','TG/2019/403'),
+('ICT1213','TG/2019/403'),
+('ICT1232','TG/2019/403')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/403'), ('ICT1123','TG/2019/403'), ('ICT1133','TG/2019/403'), ('ICT1143','TG/2019/403'), ('ICT1213','TG/2019/403'), ('ICT1232','TG/2019/403');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/404'),
+('ICT1123','TG/2019/404'),
+('ICT1133','TG/2019/404'),
+('ICT1143','TG/2019/404'),
+('ICT1213','TG/2019/404'),
+('ICT1232','TG/2019/404')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/404'), ('ICT1123','TG/2019/404'), ('ICT1133','TG/2019/404'), ('ICT1143','TG/2019/404'), ('ICT1213','TG/2019/404'), ('ICT1232','TG/2019/404');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/405'),
+('ICT1123','TG/2019/405'),
+('ICT1133','TG/2019/405'),
+('ICT1143','TG/2019/405'),
+('ICT1213','TG/2019/405'),
+('ICT1232','TG/2019/405')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/405'), ('ICT1123','TG/2019/405'), ('ICT1133','TG/2019/405'), ('ICT1143','TG/2019/405'), ('ICT1213','TG/2019/405'), ('ICT1232','TG/2019/405');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/406'),
+('ICT1123','TG/2019/406'),
+('ICT1133','TG/2019/406'),
+('ICT1143','TG/2019/406'),
+('ICT1213','TG/2019/406'),
+('ICT1232','TG/2019/406')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/406'), ('ICT1123','TG/2019/406'), ('ICT1133','TG/2019/406'), ('ICT1143','TG/2019/406'), ('ICT1213','TG/2019/406'), ('ICT1232','TG/2019/406');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/407'),
+('ICT1123','TG/2019/407'),
+('ICT1133','TG/2019/407'),
+('ICT1143','TG/2019/407'),
+('ICT1213','TG/2019/407'),
+('ICT1232','TG/2019/407')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/407'), ('ICT1123','TG/2019/407'), ('ICT1133','TG/2019/407'), ('ICT1143','TG/2019/407'), ('ICT1213','TG/2019/407'), ('ICT1232','TG/2019/407');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/408'),
+('ICT1123','TG/2019/408'),
+('ICT1133','TG/2019/408'),
+('ICT1143','TG/2019/408'),
+('ICT1213','TG/2019/408'),
+('ICT1232','TG/2019/408')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/408'), ('ICT1123','TG/2019/408'), ('ICT1133','TG/2019/408'), ('ICT1143','TG/2019/408'), ('ICT1213','TG/2019/408'), ('ICT1232','TG/2019/408');
+INSERT INTO course_and_student (course_id,stu_id) VALUES
+('ICT1113','TG/2019/409'),
+('ICT1123','TG/2019/409'),
+('ICT1133','TG/2019/409'),
+('ICT1143','TG/2019/409'),
+('ICT1213','TG/2019/409'),
+('ICT1232','TG/2019/409')
+;
+INSERT INTO course_and_student (course_id,stu_id) VALUES  ('ICT1113','TG/2019/409'), ('ICT1123','TG/2019/409'), ('ICT1133','TG/2019/409'), ('ICT1143','TG/2019/409'), ('ICT1213','TG/2019/409'), ('ICT1232','TG/2019/409');
+SELECT *FROM course_and_student;
+select *from course_and_lecturer;
+color
+;
+exit
+use uni_mis
+SHOW TABLES;
+SELECT * FROM attendance WHERE status=0;
+SELECT * FROM attendance;
+show databases;
+use uni_mis;
+show tables;
+exit
+use uni_mis;
+exit
+SHOW DATABASES;
+USE uni_mis;
+SHOW tables;
+SELECT *FROM attendance;
+desc Quiz_marks;
+desc quiz_marks;
+SELECT *FROM quiz_marks;
+exit;
+use uni_mis;
+SELECT quiz_1_marks, quiz_2_marks, quiz_3_marks FROM quiz_marks WHERE stu_id = "TG/2019/400" AND course_id = "ICT1113";
+SELECT * FROM(SELECT quiz_1_marks, quiz_2_marks, quiz_3_marks FROM quiz_marks WHERE stu_id = "TG/2019/400" AND course_id = "ICT1113") WHERE GREATEST(quiz_1_marks, quiz_2_marks, quiz_3_marks);
+SELECT stu_id FROM quiz_marks WHERE GREATEST(quiz_1_marks, quiz_2_marks, quiz_3_marks);
+SELECT GREATEST(quiz_1_marks, quiz_2_marks, quiz_3_marks) FROM quiz_marks;
+use uni_mis
+SHOW quiz_marks
+;
+SHOW quiz_mark;
+SELECT  * FROM quiz_marks;
+show tables;
+show databases;
+use uni_mis;
+show tables;
+desc quiz_marks;
+SELECT quiz_1_marks,quiz_2_marks,quiz_3_mark,quiz_4_marks FROM quiz_marks;
+SELECT quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks FROM quiz_marks;
+SELECT MAX(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4)_marks FROM quiz_marks WHERE stu_id='TG/2019/400';
+SELECT MAX(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) FROM quiz_marks WHERE stu_id='TG/2019/400';
+SELECT *FROM quiz_marks;
+SELECT MAX(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) FROM quiz_marks WHERE stu_id='TG/2019/400' AND course_id='ICT1113';
+SELECT
+    stu_id,course_id,
+    (SELECT MAX(quiz1,quiz2,quiz3,quiz4)
+        FROM (VALUES
+            (quiz_1_marks), 
+            (quiz_2_marks), 
+            ( quiz_3_marks), 
+            (quiz_4_marks), 
+    ) 
+        AS value(quiz1,quiz2,quiz3,quiz4))
+    AS quiz1,quiz2,quiz3,quiz4
+FROM quiz_marks;
+SELECT     stu_id,course_id,     (SELECT MAX(quiz1,quiz2,quiz3,quiz4)         FROM (VALUES             (quiz_1_marks),              (quiz_2_marks),              ( quiz_3_marks),              (quiz_4_marks),      )          AS value(quiz1,quiz2,quiz3,quiz4))     AS quiz1,quiz2,quiz3,quiz4 FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value
+FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1,Max_vale2
+FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1,Max_vale2 FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 AS Max_value2
+FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 AS Max_value2 FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1, AS Max_value2
+FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1, AS Max_value2 FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1,AS Max_value2
+FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1,AS Max_value2 FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 Max_value2
+FROM quiz_marks ORDER BY quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks ASC;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 Max_value2 FROM quiz_marks ORDER BY quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks ASC;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1
+FROM quiz_marks ORDER BY quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks ASC;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 FROM quiz_marks ORDER BY quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks ASC;
+SELECT id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max,
+GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max, GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY DESC,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY DESC, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY max DESC,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY max DESC, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY max DESC;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ORDER BY max DESC  FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) FROM quiz_marks as max ORDER BY max DESC ;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) FROM quiz_marks as max;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ,
+GREATEST(quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2,
+GREATEST( quiz_3_marks, quiz_4_marks) as max3;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max , GREATEST(quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2, GREATEST( quiz_3_marks, quiz_4_marks) as max3;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ,
+GREATEST(quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2,
+GREATEST( quiz_3_marks, quiz_4_marks) as max3 FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max , GREATEST(quiz_2_marks, quiz_3_marks, quiz_4_marks) as max2, GREATEST( quiz_3_marks, quiz_4_marks) as max3 FROM quiz_marks;
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max AND GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max AND GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max ADN GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1
+FROM quiz_marks ORDER BY 
+SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max,
+LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT stu_id, GREATEST(quiz_1_marks,quiz_2_marks,quiz_3_marks,quiz_4_marks) AS Max_value1 FROM quiz_marks ORDER BY    SELECT stu_id,GREATEST( quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as max, LEAST(quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks) as min FROM quiz_marks;
+SELECT
+    CASE
+        WHEN quiz_1_marks >=quiz_2_marks AND quiz_1_marks >= quiz_3_marks AND quiz_1_marks>=quiz_4_marks THEN max1
+        WHEN quiz_2_marks >=quiz_2_marks AND quiz_2_marks >= quiz_3_marks AND quiz_2_marks>=quiz_4_marks THEN max2
+        WHEN quiz_3_marks >=quiz_2_marks AND quiz_3_marks >= quiz_3_marks AND quiz_3_marks>=quiz_4_marks THEN max3
+        WHEN quiz_4_marks >=quiz_2_marks AND quiz_4_marks >= quiz_3_marks AND quiz_4_marks>=quiz_4_marks THEN max4
+        ELSE                 
+    END AS MostRecentDate;
+SELECT     CASE         WHEN quiz_1_marks >=quiz_2_marks AND quiz_1_marks >= quiz_3_marks AND quiz_1_marks>=quiz_4_marks THEN max1         WHEN quiz_2_marks >=quiz_2_marks AND quiz_2_marks >= quiz_3_marks AND quiz_2_marks>=quiz_4_marks THEN max2         WHEN quiz_3_marks >=quiz_2_marks AND quiz_3_marks >= quiz_3_marks AND quiz_3_marks>=quiz_4_marks THEN max3         WHEN quiz_4_marks >=quiz_2_marks AND quiz_4_marks >= quiz_3_marks AND quiz_4_marks>=quiz_4_marks THEN max4         ELSE                      END AS MostRecentDate;
+SELECT
+    CASE
+        WHEN quiz_1_marks >=quiz_2_marks AND quiz_1_marks >= quiz_3_marks AND quiz_1_marks>=quiz_4_marks THEN max1
+        WHEN quiz_2_marks >=quiz_2_marks AND quiz_2_marks >= quiz_3_marks AND quiz_2_marks>=quiz_4_marks THEN max2
+        WHEN quiz_3_marks >=quiz_2_marks AND quiz_3_marks >= quiz_3_marks AND quiz_3_marks>=quiz_4_marks THEN max3
+        WHEN quiz_4_marks >=quiz_2_marks AND quiz_4_marks >= quiz_3_marks AND quiz_4_marks>=quiz_4_marks THEN max4
+        ELSE                 
+    END FROM quiz_marks;
+SELECT     CASE         WHEN quiz_1_marks >=quiz_2_marks AND quiz_1_marks >= quiz_3_marks AND quiz_1_marks>=quiz_4_marks THEN max1         WHEN quiz_2_marks >=quiz_2_marks AND quiz_2_marks >= quiz_3_marks AND quiz_2_marks>=quiz_4_marks THEN max2         WHEN quiz_3_marks >=quiz_2_marks AND quiz_3_marks >= quiz_3_marks AND quiz_3_marks>=quiz_4_marks THEN max3         WHEN quiz_4_marks >=quiz_2_marks AND quiz_4_marks >= quiz_3_marks AND quiz_4_marks>=quiz_4_marks THEN max4         ELSE                      END FROM quiz_marks;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qm end) max1,
+      max(case rn when 2 then qm end) max2,
+      max(case rn when 3 then qm end) max3,
+      max(case rn when 4 then qm end) max4
+   from (
+      select q.m qm, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks union all
+         select quiz_3_marks union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qm end) max1,       max(case rn when 2 then qm end) max2,       max(case rn when 3 then qm end) max3,       max(case rn when 4 then qm end) max4    from (       select q.m qm, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks union all          select quiz_3_marks union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qm, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks union all
+         select quiz_3_marks union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qm, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks union all          select quiz_3_marks union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qm, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union 
+         select quiz_2_marks union
+         select quiz_3_marks union 
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qm, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union           select quiz_2_marks union          select quiz_3_marks union           select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union 
+         select quiz_2_marks union
+         select quiz_3_marks union 
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union           select quiz_2_marks union          select quiz_3_marks union           select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.n qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks 
+         select quiz_2_marks 
+         select quiz_3_marks  
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.n qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks           select quiz_2_marks           select quiz_3_marks            select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.n qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.n qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select  
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select         max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+SELECT *FROM quiz_marks;
+exit
+use uni_mis
+SHOW TABLES;
+SELECT * FROM quiz_marks;
+CREATE TABLE TG/2019/400_ICT1113_quizes
+(stu_id char(11) NOT NULL,
+quiz_number char(1) NOT NULL,
+marks float NOT NULL);
+CREATE TABLE TG/2019/400_ICT1113_quizes (stu_id char(11) NOT NULL, quiz_number char(1) NOT NULL, marks float NOT NULL);
+CREATE TABLE TG/2019/400_ICT1113_quizes (stu_id char(11) NOT NULL, quiz_number char(1) NOT NULL, marks float NOT NULL, PRIMARY KEY(stu_id));
+CREATE TABLE TG/2019/400_ICT1113_quizes (stu_id char(11), quiz_number char(1), marks float, PRIMARY KEY(stu_id));
+CREATE TABLE TG_2019_400_ICT1113_quizes (stu_id char(11), quiz_number char(1), marks float, PRIMARY KEY(stu_id));
+SHOW TABLES;
+DROP TG_2019_400_ICT1113_quizes;
+DROP TABLE TG_2019_400_ICT1113_quizes;
+SELECT * FROM quiz_marks WHERE stu_id="TG/2019/400";
+SELECT course_id, quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks FROM quiz_marks WHERE stu_id="TG/2019/400";
+CREATE VIEW TG_2019_400_quiz_marks AS SELECT course_id, quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks FROM quiz_marks WHERE stu_id="TG/2019/400";
+SHOW TABLES;
+SELECT * FROM TG_2019_400_quiz_marks;
+SELECT course_id,
+SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks ELSE 0 END) AS ICT1113
+FROM TG/2019/400_quiz_marks
+GROUP BY
+course_id;
+SELECT course_id, SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks ELSE 0 END) AS ICT1113 FROM TG/2019/400_quiz_marks GROUP BY course_id;
+SELECT course_id, SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks ELSE 0 END) AS ICT1113 FROM TG_2019_400_quiz_marks GROUP BY course_id;
+DROP VIEW TG_2019_400_quiz_marks;
+CREATE VIEW TG_2019_400_quiz_marks AS SELECT stu_id, course_id, quiz_1_marks, quiz_2_marks, quiz_3_marks, quiz_4_marks FROM quiz_marks WHERE stu_id="TG/2019/400";
+SELECT course_id, SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks ELSE 0 END) AS ICT1113 FROM TG_2019_400_quiz_marks GROUP BY course_id;
+SELECT stu_id, SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks ELSE 0 END) AS ICT1113, SUM(CASE WHEN course_id = "ICT1123" THEN quiz_1_marks ELSE 0 END) AS ICT1123 FROM TG_2019_400_quiz_marks GROUP BY course_id;
+SELECT stu_id, SUM(CASE WHEN course_id = "ICT1113" THEN quiz_1_marks, quiz_2_marks ELSE 0 END) AS ICT1113, SUM(CASE WHEN course_id = "ICT1123" THEN quiz_1_marks ELSE 0 END) AS ICT1123 FROM TG_2019_400_quiz_marks GROUP BY course_id;
+use uni_mis
+SHOW TABLES;
+select max1, max2, max3, max4
+from quiz_marks
+cross join lateral (
+   select
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+select max1, max2, max3, max4 from quiz_marks cross join lateral (    select       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+SELECT stuid, course_id, max1, max2, max3, max4
+FROM quiz_marks
+cross join lateral (
+   select
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+SELECT stuid, course_id, max1, max2, max3, max4 FROM quiz_marks cross join lateral (    select       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+SELECT stu_id, course_id, max1, max2, max3, max4
+FROM quiz_marks
+cross join lateral (
+   select
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+SELECT stu_id, course_id, max1, max2, max3, max4 FROM quiz_marks cross join lateral (    select       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+SELECT stu_id, course_id, max1, max2, max3
+FROM quiz_marks
+cross join lateral (
+   select
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      select q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         select quiz_1_marks union all
+         select quiz_2_marks  union all
+         select quiz_3_marks  union all
+         select quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+SELECT stu_id, course_id, max1, max2, max3 FROM quiz_marks cross join lateral (    select       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       select q.m qn, row_number() over(order by q.m desc) rn       from (          select quiz_1_marks union all          select quiz_2_marks  union all          select quiz_3_marks  union all          select quiz_4_marks       ) q(m)     ) t  ) t;
+SELECT stu_id, course_id, max1, max2, max3
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   from (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      from (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400";
+SELECT stu_id, course_id, max1, max2, max3 FROM quiz_marks cross join lateral (    SELECT       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    from (       SELECT q.m qn, row_number() over(order by q.m desc) rn       from (          SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks       ) q(m)     ) t  ) t WHERE stu_id="TG/2019/400";
+SELECT stu_id, course_id, max1, max2, max3
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      max(case rn when 1 then qn end) max1,
+      max(case rn when 2 then qn end) max2,
+      max(case rn when 3 then qn end) max3,
+      max(case rn when 4 then qn end) max4
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3 FROM quiz_marks cross join lateral (    SELECT       max(case rn when 1 then qn end) max1,       max(case rn when 2 then qn end) max2,       max(case rn when 3 then qn end) max3,       max(case rn when 4 then qn end) max4    FROM (       SELECT q.m qn, row_number() over(order by q.m desc) rn       FROM (          SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks       ) q(m)     ) t  ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      SUM(qn)
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       SUM(qn)      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      SUM(qn) avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       SUM(qn) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      max1+max2+max3 avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       max1+max2+max3 avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      AVG(max1+max2+max3) avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       AVG(max1+max2+max3) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      (MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end)) avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       (MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end)) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+use uni_mis
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      ((MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end))/3) avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       ((MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end))/3) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2, max3, avg
+FROM quiz_marks
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+      MAX(case rn when 4 then qn end) max4,
+      ((MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end))/3) avg
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT quiz_1_marks union all
+         SELECT quiz_2_marks  union all
+         SELECT quiz_3_marks  union all
+         SELECT quiz_4_marks
+      ) q(m)
+    ) t
+ ) t;
+SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       ((MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end))/3) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t;
+CREATE VIEW quiz_mark_avgs AS SELECT stu_id, course_id, max1, max2, max3, avg  FROM quiz_marks  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,       MAX(case rn when 4 then qn end) max4,       ((MAX(case rn when 1 then qn end)+MAX(case rn when 2 then qn end)+MAX(case rn when 3 then qn end))/3) avg      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT quiz_1_marks union all          SELECT quiz_2_marks  union all          SELECT quiz_3_marks  union all          SELECT quiz_4_marks        ) q(m)      ) t   ) t;
+SELECT * FROM quiz_mark_avgs;
+SHOW TABLES;
+DROP VIEW TG_2019_400_quiz_marks;
+SHOW TABLES;
+DESC quiz_mark_avgs;
+SELECT * FROM mid_exam_marks;
+SELECT mid_theory*(60/100), mid_practical*(40/100) FROM mid_exam_marks;
+SELECT stu_id, course_id, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100) AS overall FROM mid_exam_marks;
+SELECT stu_id, course_id, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100)) AS overall FROM mid_exam_marks;
+SELECT NULL+2;
+SELECT * FROM medical;
+SELECT * FROM medicals;
+SELECT stu_id, course_id, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100)) AS overall FROM mid_exam_marks WHERE mid_practical NOT NULL;
+SELECT stu_id, course_id, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100)) AS overall FROM mid_exam_marks WHERE mid_practical IS NOT NULL;
+SELECT IF(mid_practical IS NOT NULL THEN stu_id, course_id, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100)) AS overall, mid_theory AS overall) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100) AS theory, mid_practical*(40/100) AS practical, (mid_theory*(60/100))+(mid_practical*(40/100)) AS overall, mid_theory AS overall) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100) AS theory , mid_theory AS overall) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, "HELLO" , "MELLO") FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, (mid_theory*(60/100) AS theory) , (mid_theory AS overall)) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100) , mid_theory) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100)) AS theory ELSE mid_theory AS overall FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL) THEN mid_theory*(60/100) AS theory ELSE mid_theory AS overall FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL) THEN mid_theory*(60/100) AS theory FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL) THEN mid_theory*(60/100) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100)) AS mid_theory FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100)) FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100), mid_theory) AS mid_theory FROM mid_exam_marks;
+SELECT * FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100), mid_theory) AS mid_theory, IF(mid_practical IS NOT NULL, mid_practical*(60/100), NULL) AS mid_practical FROM mid_exam_marks;
+SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100), mid_theory) AS mid_theory, IF(mid_practical IS NOT NULL, mid_practical*(40/100), NULL) AS mid_practical, IF(mid_practical IS NOT NULL, (mid_theory*(60/100))+(mid_practical*(40/100)), mid_theory) AS overall FROM mid_exam_marks;
+CREATE VIEW mid_exam_overall_marks AS SELECT stu_id, course_id, IF(mid_practical IS NOT NULL, mid_theory*(60/100), mid_theory) AS mid_theory, IF(mid_practical IS NOT NULL, mid_practical*(40/100), NULL) AS mid_practical, IF(mid_practical IS NOT NULL, (mid_theory*(60/100))+(mid_practical*(40/100)), mid_theory) AS overall FROM mid_exam_marks;
+SELECT * FROM mid_exam_overall_marks;
+SELECT * FROM end_exam_marks;
+SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory) 
+AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL) 
+AS mid_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory) 
+AS overall FROM end_exam_marks;
+SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory)  AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL)  AS mid_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory)  AS overall FROM end_exam_marks;
+SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory) 
+AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL) 
+AS end_exam_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory) 
+AS overall FROM end_exam_marks;
+SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory)  AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL)  AS end_exam_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory)  AS overall FROM end_exam_marks;
+CREATE VIEW end_exam_overall_marks SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory) 
+AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL) 
+AS end_exam_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory) 
+CREATE VIEW end_exam_overall_marks AS SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory) 
+AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL) 
+AS end_exam_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory) 
+AS overall FROM end_exam_marks;
+CREATE VIEW end_exam_overall_marks AS SELECT stu_id, course_id, IF(end_exam_practical IS NOT NULL, end_exam_theory*(60/100), end_exam_theory)  AS end_exam_theory, IF(end_exam_practical IS NOT NULL, end_exam_practical*(40/100), NULL)  AS end_exam_practical, IF(end_exam_practical IS NOT NULL, (end_exam_theory*(60/100))+(end_exam_practical*(40/100)), end_exam_theory)  AS overall FROM end_exam_marks;
+SHOW TABLES:
+;
+SHOW TABLES;
+end_exam_overall_marks;
+SELECT * FROM end_exam_overall_marks;
+SHOW TABLESl
+SHOW TABLES;
+DESC assessments;
+SELECT * FROM assessments;
+SHOW TABLES;
+SELECT avg, e.overall, m.overall FROM quiz_mark_avgs, mid_exam_overall_marks as m, end_exam_overall_marks as m;
+SELECT avg, e.overall, m.overall FROM quiz_mark_avgs, mid_exam_overall_marks m, end_exam_overall_marks e;
+SELECT avg, e.overall, m.overall FROM quiz_mark_avgs, mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id;
+SELECT q.avg, e.overall, m.overall FROM quiz_mark_avgs q, mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id = q.stu_id;
+SELECT q.avg, e.overall, m.overall FROM quiz_mark_avgs q, mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = q.stu_id;
+SHOW TABLES;
+SELET * FROM quiz_mark_avgs;
+SELECT * FROM quiz_mark_avgs;
+SELECT * FROM final_exam_overall;
+SELECT * FROM final_exam_overall_marks;
+SELECT * FROM end_exam_overall_marks;
+SELECT e.overall, m.overall FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.course_id = m.course_id;
+SELECT e.overall, m.overall FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id;
+SELECT e.overall, m.overall FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT stu_id, course_id, e.overall, m.overall FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall, m.overall FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks FROM mid_exam_overall_marks m, end_exam_overall_marks e WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs q WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs q WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id AND q.course_id = m.course_id AND q.stu_id = m.course_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs q WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id AND q.course_id = m.course_id AND q.stu_id = m.stu_id;
+SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg AS quiz_marks FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs q WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id AND q.course_id = m.course_id AND q.stu_id = m.stu_id;
+CREATE VIEW overall_grades AS SELECT m.stu_id, m.course_id, e.overall AS end_exam_marks, m.overall AS mid_exam_marks, q.avg AS quiz_marks FROM mid_exam_overall_marks m, end_exam_overall_marks e, quiz_mark_avgs q WHERE e.stu_id = m.stu_id AND e.course_id = m.course_id AND q.course_id = m.course_id AND q.stu_id = m.stu_id;
+SELECT * FROM overall_grades;
+SELECT * FROM assessments;
+SHOW TABLES
+;
+SELECT * FROM end_exam_marks;
+SHOW TABLES;
+SELECT * FROM end_exam_overall_marks;
+DROP VIEW end_exam_overall_marks;
+SHOW FULL TABLES;
+SELECT * FROM assessments;
+DESC assessments;
+show databases;
+use uni_mis;
+show tables;
+select *from assessments;
+exit
+use uni_mis
+SHOW TABLESl
+SHOW TABLES;
+SELECT * FROM assessments;
+SELECT * FROM mid_exam_overall_marks;
+SELECT * FROM end_exam_marks;
+SELECT * FROMquiz_mark_avgs;
+SELECT * FROMq uiz_mark_avgs;
+SELECT * FROM quiz_mark_avgs;
+SELECT * FROM courses;
+SELECT * FROM cours;
+SELECT * FROM course;
+SELECT stu_id, course_id, max1, max2
+FROM assessments
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3,
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT assessment_1 union all
+         SELECT assessment_2  union all
+         SELECT assessment_3
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2  FROM assessments  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3,      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT assessment_1 union all          SELECT assessment_2  union all          SELECT assessment_3        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT * FROM assessments;
+SELECT stu_id, course_id, max1, max2
+FROM assessments
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT assessment_1 union all
+         SELECT assessment_2  union all
+         SELECT assessment_3
+      ) q(m)
+    ) t
+ ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2  FROM assessments  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT assessment_1 union all          SELECT assessment_2  union all          SELECT assessment_3        ) q(m)      ) t   ) t WHERE stu_id="TG/2019/400" AND course_id = "ICT1113";
+SELECT stu_id, course_id, max1, max2
+FROM assessments
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT assessment_1 union all
+         SELECT assessment_2  union all
+         SELECT assessment_3
+      ) q(m)
+    ) t
+ ) t;
+SELECT stu_id, course_id, max1, max2  FROM assessments  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT assessment_1 union all          SELECT assessment_2  union all          SELECT assessment_3        ) q(m)      ) t   ) t;
+CREATE VIEW assessment_top_marks AS SELECT stu_id, course_id, max1, max2
+FROM assessments
+cross join lateral (
+   SELECT
+      MAX(case rn when 1 then qn end) max1,
+      MAX(case rn when 2 then qn end) max2,
+      MAX(case rn when 3 then qn end) max3
+   FROM (
+      SELECT q.m qn, row_number() over(order by q.m desc) rn
+      FROM (
+         SELECT assessment_1 union all
+         SELECT assessment_2  union all
+         SELECT assessment_3
+      ) q(m)
+    ) t
+ ) t;
+CREATE VIEW assessment_top_marks AS SELECT stu_id, course_id, max1, max2  FROM assessments  cross join lateral (     SELECT        MAX(case rn when 1 then qn end) max1,       MAX(case rn when 2 then qn end) max2,       MAX(case rn when 3 then qn end) max3      FROM (        SELECT q.m qn, row_number() over(order by q.m desc) rn        FROM (           SELECT assessment_1 union all          SELECT assessment_2  union all          SELECT assessment_3        ) q(m)      ) t   ) t;
+SELECT * FROM assessment_top_marks;
+SELECT * FROM quiz_mark_avgs;
+SELECT * FROM end_exam_marks;
+SHOW TABLESl
+SHOW TABLES;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avg q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.stu_id = e.course_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.stu_id = e.course_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_is, q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_is, q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max1)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+CREATE VIEW final_grade_temp AS SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+CREATE VIEW final_grade_temp AS SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT * FROM final_grade_temp;
+SHOW FULL TABLES;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", NULL, (f.assessmet_marks)*(20/100)) AS assessmet_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", NULL, (f.assessmet_marks)*(20/100)) AS assessment_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks FROM final_grade_temp f;
+SELECT * FROM assessments;
+SELECT * FROM quiz_marks;
+SHOW TABLES;
+SELECT * FROM final_grade_temp;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e
+WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT q.stu_id, q.course_id, q.avg AS quiz_marks, (a.max1+a.max2)/2 AS assessment_marks, m.overall AS mid_marks, e.end_exam_theory AS end_exam_theory, e.end_exam_practical AS end_exam_practical FROM quiz_mark_avgs q, assessment_top_marks a, mid_exam_overall_marks m, end_exam_marks e WHERE q.stu_id = a.stu_id AND a.stu_id = m.stu_id AND m.stu_id = e.stu_id AND q.stu_id = e.stu_id AND q.course_id = a.course_id AND a.course_id = m.course_id AND m.course_id = e.course_id AND q.course_id = e.course_id;
+SELECT * FROM assessment marks;
+SELECT * FROM assessment_marks;
+SELECT * FROM assessments;
+SELECT * FROM quiz_marks;
+SHOW TABLES;
+SELECT * FROM final_grade_temp;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1123" OR f.course_id="ICT1133", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks IF(f.course_id=) FROM final_grade_temp f;
+SELECT * FROM assessments;
+use uni_mis
+SHOW FULL TABLES;
+SELECT * FROM overall_grades;
+SELECT * FROM final_grade_temp;
+DROP VIEW overall_grades;
+SHOW FULL TABLES;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks IF(f.course_id=) FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks FROM final_grade_temp f;
+SELECT * FROM end_exam_marks;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory
+FROM final_grade_temp f, end_exam_marks e;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory  FROM final_grade_temp f, end_exam_marks e;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory
+FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=q.course_id AND e.stu_id=q.stu_id;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory  FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=q.course_id AND e.stu_id=q.stu_id;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory
+FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=q.stu_id;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory  FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=q.stu_id;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory
+FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=f.stu_id;
+SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory  FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=f.stu_id;
+use uni_mis
+SHOW FULL TABLES;
+CREATE VIEW final_grade_temp_scaled AS SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks, 
+IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks, 
+IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory,
+IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_practical)*(30/100), IF(e.course_id="ICT1113", NULL , IF(e.course_id="ICT1143", (e.end_exam_practical)*(40/100), NULL))) AS end_practical
+FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=f.stu_id;
+CREATE VIEW final_grade_temp_scaled AS SELECT f.stu_id, f.course_id, IF(f.course_id="ICT1213" OR f.course_id="ICT1232", (f.quiz_marks)*(20/100), (f.quiz_marks)*(10/100)) AS quiz_marks,  IF(f.course_id="ICT1213" OR f.course_id="ICT1232", NULL, (f.assessment_marks)*(20/100)) AS assessment_marks,  IF(f.course_id="ICT1213" OR f.course_id="ICT1232" OR f.course_id="ICT1113", (f.mid_marks)*(20/100), NULL) AS mid_marks, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1143", (e.end_exam_theory)*(30/100), IF(e.course_id="ICT1113", (e.end_exam_theory)*(50/100), IF(e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_theory)*(40/100), NULL))) AS end_theory, IF(e.course_id="ICT1213" OR e.course_id="ICT1232" OR e.course_id="ICT1123" OR e.course_id="ICT1133", (e.end_exam_practical)*(30/100), IF(e.course_id="ICT1113", NULL , IF(e.course_id="ICT1143", (e.end_exam_practical)*(40/100), NULL))) AS end_practical  FROM final_grade_temp f, end_exam_marks e WHERE e.course_id=f.course_id AND e.stu_id=f.stu_id;
+SELECT * FROM final_grade_temp;
+SELECT * FROM final_grade_temp_scaled;
+SELECT (IF(f.quiz_marks IS NOT NULL, f.quiz_marks, NULL))+(IF(f.assessment_marks IS NOT NULL, f.assessment_marks, NULL))+(IF(f.mid_marks IS NOT NULL, f.mid_marks, NULL))+(IF(f.end_theory IS NOT NULL, f.end_theory, NULL))+(IF(f.end_practical IS NOT NULL, f.end_practical, NULL)) FROM final_grade_temp_scaled f;
+SELECT (IF(f.quiz_marks IS NOT NULL, f.quiz_marks, 0))+(IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))+(IF(f.mid_marks IS NOT NULL, f.mid_marks, 0))+(IF(f.end_theory IS NOT NULL, f.end_theory, 0))+(IF(f.end_practical IS NOT NULL, f.end_practical, 0)) AS final_grades FROM final_grade_temp_scaled f;
+SELECT f.stu_id, f.course_id, (IF(f.quiz_marks IS NOT NULL, f.quiz_marks, 0))+(IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))+(IF(f.mid_marks IS NOT NULL, f.mid_marks, 0))+(IF(f.end_theory IS NOT NULL, f.end_theory, 0))+(IF(f.end_practical IS NOT NULL, f.end_practical, 0)) AS final_grades FROM final_grade_temp_scaled f;
+DESC grades;
+DROP TABLE grades;
+CREATE VIEW grades AS SELECT f.stu_id, f.course_id, (IF(f.quiz_marks IS NOT NULL, f.quiz_marks, 0))+(IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))+(IF(f.mid_marks IS NOT NULL, f.mid_marks, 0))+(IF(f.end_theory IS NOT NULL, f.end_theory, 0))+(IF(f.end_practical IS NOT NULL, f.end_practical, 0)) AS final_grades FROM final_grade_temp_scaled f;
+SELECT * FROM grades;
+DESC grades;
+use uni_mis;
+select *from grades;
+exit
+show databases;
+use uni_mis
+show tables;
+SELECT *FROM assessment_top_marks;
+ok
+;
+exit
+use uni_mis
+SELECT * FROM attendance;
+SELECT * FROM attendance WHERE status=0;
+SHOW FULL TABLES;
+SELECT * FROM course_and_student;
+SHOW FULL TABLES;
+use uni_mis
+SHOW FULL TABLES;
+SELECT * FROM final_grade_temp;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+f.assessment_marks)/2 AS ca_marks, IF((f.quiz_marks+f.assessment_marks)/2 > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f; 
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+f.assessment_marks)/2 AS ca_marks, IF(((f.quiz_marks+f.assessment_marks)/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+f.assessment_marks)/2 AS ca_marks FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, (((f.quiz_marks+f.assessment_marks)/2) AS ca_marks, IF(((f.quiz_marks+f.assessment_marks)/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF(((f.quiz_marks+f.assessment_marks)/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+f.assessment_marks)/2) AS ca_marks, IF(((f.quiz_marks+f.assessment_marks)/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF((f.quiz_marks+IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))/2) AS ca_marks, IF(((f.quiz_marks+IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF((f.quiz_marks+IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0))/2) AS ca_marks, IF(((f.quiz_marks+(IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0)))/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF((f.quiz_marks+f.assessment_marks)/2) AS ca_marks, IF(((f.quiz_marks+f.assessment_marks)/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+f.assessment_marks)/2) AS ca_marks, IF(((f.quiz_marks+ IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0) )/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, ((f.quiz_marks+ IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0) )/2) AS ca_marks, IF(((f.quiz_marks+ IF(f.assessment_marks IS NOT NULL, f.assessment_marks, 0) )/2) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF(f.assessment_marks IS NOT NULL, ((f.quiz_marks+f.assessment_marks)/2), f.quiz_marks) AS ca_marks, IF(IF(f.assessment_marks IS NOT NULL, ((f.quiz_marks+f.assessment_marks)/2), f.quiz_marks) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+CREATE VIEW ca_eligibility AS SELECT f.stu_id, f.course_id, f.quiz_marks, f.assessment_marks, IF(f.assessment_marks IS NOT NULL, ((f.quiz_marks+f.assessment_marks)/2), f.quiz_marks) AS ca_marks, IF(IF(f.assessment_marks IS NOT NULL, ((f.quiz_marks+f.assessment_marks)/2), f.quiz_marks) > 50, "PASS", "FAIL") AS eligibility FROM final_grade_temp f;
+SELECT * FROM ca_eliggibility;
+SELECT * FROM ca_eligibility;
+use uni_mis;
+show tables;
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c;
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id;
+desc sgpa_temp;
+SELECT *FROM sgpa_temp;
+use uni_mis
+SHOW TABLES;
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id;
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+CREATE TABLE student_sgpa AS SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+CREATE TABLE student_sgpa AS SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+SELECT * FROM student_sgpa;
+DESC mysql.userl
+DESC mysql.user;
+SELECT Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Grant_priv, Create_user_priv FROM mysql.user;
+SELECT User, Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Grant_priv, Create_user_priv FROM mysql.user;
+SELECT User, Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Grant_priv, Create_user_priv FROM mysql.user WHERE User="Admin" AND User="Dean" AND User="Demonstrator" AND User="Lecturer" AND User="Student" AND User="Technical_Officer";
+SELECT User, Select_priv, Insert_priv, Update_priv, Delete_priv, Create_priv, Grant_priv, Create_user_priv FROM mysql.user WHERE User="Admin" OR User="Dean" OR User="Demonstrator" OR User="Lecturer" OR User="Student" OR User="Technical_Officer";
+use uni_mis;
+show tables;
+SELECT *sgpa_temp;
+SELECT *FROM sgpa_temp;
+desc course;
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND c.course_id="ICT1113";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.course_id="ICT1113";
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND c.course_id="ICT1113";
+exit
+show databases;
+use uni_mis;
+show tables;
+select *from quiz_marks;
+select *from assessments;
+select *from admin;
+exit;
+SHOW DATABASES;
+USE uni_mis;
+SHOW TABLES;
+history
+;
+exit
+use uni_mis
+SELECT * FROM courses;
+SELECT * FROM course;
+SELECT * FROM quiz_marks;
+show DATABASES;
+use uni_mis;
+show tables;
+SELECT *FROM course;
+desc course_and_student;
+desc attendance;
+Assessment Top Marks
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled;
+Assessment Top Marks  CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled;
+Assessment Top Marks
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled;
+Assessment Top Marks  CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled
+;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp_scaled` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),
+            (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            NULL,
+            (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),
+            (`uni_mis`.`f`.`mid_marks` * (20 / 100)),
+            NULL) AS `mid_marks`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1143')),
+            (`e`.`end_exam_theory` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                (`e`.`end_exam_theory` * (50 / 100)),
+                IF(((`e`.`course_id` = 'ICT1123')
+                        OR (`e`.`course_id` = 'ICT1133')),
+                    (`e`.`end_exam_theory` * (40 / 100)),
+                    NULL))) AS `end_theory`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1123')
+                OR (`e`.`course_id` = 'ICT1133')),
+            (`e`.`end_exam_practical` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                NULL,
+                IF((`e`.`course_id` = 'ICT1143'),
+                    (`e`.`end_exam_practical` * (40 / 100)),
+                    NULL))) AS `end_practical`
+    FROM
+        (`uni_mis`.`final_grade_temp` `f`
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)
+            AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))
+Final_Grade_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp` AS
+    SELECT 
+        `uni_mis`.`q`.`stu_id` AS `stu_id`,
+        `uni_mis`.`q`.`course_id` AS `course_id`,
+        `uni_mis`.`q`.`avg` AS `quiz_marks`,
+        ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,
+        `uni_mis`.`m`.`overall` AS `mid_marks`,
+        `e`.`end_exam_theory` AS `end_exam_theory`,
+        `e`.`end_exam_practical` AS `end_exam_practical`
+    FROM
+        (((`uni_mis`.`quiz_mark_avgs` `q`
+        JOIN `uni_mis`.`assessment_top_marks` `a`)
+        JOIN `uni_mis`.`mid_exam_overall_marks` `m`)
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)
+            AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)
+            AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)
+            AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)
+            AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)
+            AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))
+Grades
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`grades` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),
+            `uni_mis`.`f`.`quiz_marks`,
+            0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            `uni_mis`.`f`.`assessment_marks`,
+            0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),
+            `uni_mis`.`f`.`mid_marks`,
+            0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),
+            `uni_mis`.`f`.`end_theory`,
+            0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),
+            `uni_mis`.`f`.`end_practical`,
+            0)) AS `final_grades`
+    FROM
+        `uni_mis`.`final_grade_temp_scaled` `f`
+Mid_Exam_Overall_Marks
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`mid_exam_overall_marks` AS
+    SELECT 
+        `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,
+        `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),
+            NULL) AS `mid_practical`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`
+    FROM
+        `uni_mis`.`mid_exam_marks`
+Quiz_Marks_Avarage
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)
+SGPA_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa_temp` AS
+    SELECT 
+        `uni_mis`.`g`.`stu_id` AS `stu_id`,
+        `uni_mis`.`g`.`course_id` AS `course_id`,
+        `uni_mis`.`g`.`final_grades` AS `final_grades`,
+        IF((`uni_mis`.`g`.`final_grades` >= 90),
+            10,
+            IF((`uni_mis`.`g`.`final_grades` >= 85),
+                9,
+                IF((`uni_mis`.`g`.`final_grades` >= 80),
+                    8.5,
+                    IF((`uni_mis`.`g`.`final_grades` >= 70),
+                        8,
+                        IF((`uni_mis`.`g`.`final_grades` >= 60),
+                            7,
+                            IF((`uni_mis`.`g`.`final_grades` >= 50),
+                                6,
+                                IF((`uni_mis`.`g`.`final_grades` >= 45),
+                                    5,
+                                    0))))))) AS `grade_point`
+    FROM
+        `uni_mis`.`grades` `g`
+SGPA
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa` AS
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp_scaled` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),             (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             NULL,             (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),             (`uni_mis`.`f`.`mid_marks` * (20 / 100)),             NULL) AS `mid_marks`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1143')),             (`e`.`end_exam_theory` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 (`e`.`end_exam_theory` * (50 / 100)),                 IF(((`e`.`course_id` = 'ICT1123')                         OR (`e`.`course_id` = 'ICT1133')),                     (`e`.`end_exam_theory` * (40 / 100)),                     NULL))) AS `end_theory`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1123')                 OR (`e`.`course_id` = 'ICT1133')),             (`e`.`end_exam_practical` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 NULL,                 IF((`e`.`course_id` = 'ICT1143'),                     (`e`.`end_exam_practical` * (40 / 100)),                     NULL))) AS `end_practical`     FROM         (`uni_mis`.`final_grade_temp` `f`         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)             AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))   Final_Grade_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp` AS     SELECT          `uni_mis`.`q`.`stu_id` AS `stu_id`,         `uni_mis`.`q`.`course_id` AS `course_id`,         `uni_mis`.`q`.`avg` AS `quiz_marks`,         ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,         `uni_mis`.`m`.`overall` AS `mid_marks`,         `e`.`end_exam_theory` AS `end_exam_theory`,         `e`.`end_exam_practical` AS `end_exam_practical`     FROM         (((`uni_mis`.`quiz_mark_avgs` `q`         JOIN `uni_mis`.`assessment_top_marks` `a`)         JOIN `uni_mis`.`mid_exam_overall_marks` `m`)         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)             AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)             AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)             AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)             AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)             AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))   Grades  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`grades` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),             `uni_mis`.`f`.`quiz_marks`,             0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             `uni_mis`.`f`.`assessment_marks`,             0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),             `uni_mis`.`f`.`mid_marks`,             0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),             `uni_mis`.`f`.`end_theory`,             0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),             `uni_mis`.`f`.`end_practical`,             0)) AS `final_grades`     FROM         `uni_mis`.`final_grade_temp_scaled` `f`   Mid_Exam_Overall_Marks  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`mid_exam_overall_marks` AS     SELECT          `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,         `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),             NULL) AS `mid_practical`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`     FROM         `uni_mis`.`mid_exam_marks`   Quiz_Marks_Avarage  CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)   SGPA_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa_temp` AS     SELECT          `uni_mis`.`g`.`stu_id` AS `stu_id`,         `uni_mis`.`g`.`course_id` AS `course_id`,         `uni_mis`.`g`.`final_grades` AS `final_grades`,         IF((`uni_mis`.`g`.`final_grades` >= 90),             10,             IF((`uni_mis`.`g`.`final_grades` >= 85),                 9,                 IF((`uni_mis`.`g`.`final_grades` >= 80),                     8.5,                     IF((`uni_mis`.`g`.`final_grades` >= 70),                         8,                         IF((`uni_mis`.`g`.`final_grades` >= 60),                             7,                             IF((`uni_mis`.`g`.`final_grades` >= 50),                                 6,                                 IF((`uni_mis`.`g`.`final_grades` >= 45),                                     5,                                     0))))))) AS `grade_point`     FROM         `uni_mis`.`grades` `g`  SGPA  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa` AS SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp_scaled` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),
+            (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            NULL,
+            (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),
+            (`uni_mis`.`f`.`mid_marks` * (20 / 100)),
+            NULL) AS `mid_marks`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1143')),
+            (`e`.`end_exam_theory` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                (`e`.`end_exam_theory` * (50 / 100)),
+                IF(((`e`.`course_id` = 'ICT1123')
+                        OR (`e`.`course_id` = 'ICT1133')),
+                    (`e`.`end_exam_theory` * (40 / 100)),
+                    NULL))) AS `end_theory`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1123')
+                OR (`e`.`course_id` = 'ICT1133')),
+            (`e`.`end_exam_practical` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                NULL,
+                IF((`e`.`course_id` = 'ICT1143'),
+                    (`e`.`end_exam_practical` * (40 / 100)),
+                    NULL))) AS `end_practical`
+    FROM
+        (`uni_mis`.`final_grade_temp` `f`
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)
+            AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))
+Final_Grade_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp` AS
+    SELECT 
+        `uni_mis`.`q`.`stu_id` AS `stu_id`,
+        `uni_mis`.`q`.`course_id` AS `course_id`,
+        `uni_mis`.`q`.`avg` AS `quiz_marks`,
+        ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,
+        `uni_mis`.`m`.`overall` AS `mid_marks`,
+        `e`.`end_exam_theory` AS `end_exam_theory`,
+        `e`.`end_exam_practical` AS `end_exam_practical`
+    FROM
+        (((`uni_mis`.`quiz_mark_avgs` `q`
+        JOIN `uni_mis`.`assessment_top_marks` `a`)
+        JOIN `uni_mis`.`mid_exam_overall_marks` `m`)
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)
+            AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)
+            AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)
+            AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)
+            AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)
+            AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))
+Grades
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`grades` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),
+            `uni_mis`.`f`.`quiz_marks`,
+            0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            `uni_mis`.`f`.`assessment_marks`,
+            0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),
+            `uni_mis`.`f`.`mid_marks`,
+            0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),
+            `uni_mis`.`f`.`end_theory`,
+            0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),
+            `uni_mis`.`f`.`end_practical`,
+            0)) AS `final_grades`
+    FROM
+        `uni_mis`.`final_grade_temp_scaled` `f`
+Mid_Exam_Overall_Marks
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`mid_exam_overall_marks` AS
+    SELECT 
+        `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,
+        `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),
+            NULL) AS `mid_practical`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`
+    FROM
+        `uni_mis`.`mid_exam_marks`
+Quiz_Marks_Avarage
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)
+SGPA_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa_temp` AS
+    SELECT 
+        `uni_mis`.`g`.`stu_id` AS `stu_id`,
+        `uni_mis`.`g`.`course_id` AS `course_id`,
+        `uni_mis`.`g`.`final_grades` AS `final_grades`,
+        IF((`uni_mis`.`g`.`final_grades` >= 90),
+            10,
+            IF((`uni_mis`.`g`.`final_grades` >= 85),
+                9,
+                IF((`uni_mis`.`g`.`final_grades` >= 80),
+                    8.5,
+                    IF((`uni_mis`.`g`.`final_grades` >= 70),
+                        8,
+                        IF((`uni_mis`.`g`.`final_grades` >= 60),
+                            7,
+                            IF((`uni_mis`.`g`.`final_grades` >= 50),
+                                6,
+                                IF((`uni_mis`.`g`.`final_grades` >= 45),
+                                    5,
+                                    0))))))) AS `grade_point`
+    FROM
+        `uni_mis`.`grades` `g`
+SGPA
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa` AS
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp_scaled` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),             (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             NULL,             (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),             (`uni_mis`.`f`.`mid_marks` * (20 / 100)),             NULL) AS `mid_marks`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1143')),             (`e`.`end_exam_theory` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 (`e`.`end_exam_theory` * (50 / 100)),                 IF(((`e`.`course_id` = 'ICT1123')                         OR (`e`.`course_id` = 'ICT1133')),                     (`e`.`end_exam_theory` * (40 / 100)),                     NULL))) AS `end_theory`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1123')                 OR (`e`.`course_id` = 'ICT1133')),             (`e`.`end_exam_practical` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 NULL,                 IF((`e`.`course_id` = 'ICT1143'),                     (`e`.`end_exam_practical` * (40 / 100)),                     NULL))) AS `end_practical`     FROM         (`uni_mis`.`final_grade_temp` `f`         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)             AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))   Final_Grade_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp` AS     SELECT          `uni_mis`.`q`.`stu_id` AS `stu_id`,         `uni_mis`.`q`.`course_id` AS `course_id`,         `uni_mis`.`q`.`avg` AS `quiz_marks`,         ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,         `uni_mis`.`m`.`overall` AS `mid_marks`,         `e`.`end_exam_theory` AS `end_exam_theory`,         `e`.`end_exam_practical` AS `end_exam_practical`     FROM         (((`uni_mis`.`quiz_mark_avgs` `q`         JOIN `uni_mis`.`assessment_top_marks` `a`)         JOIN `uni_mis`.`mid_exam_overall_marks` `m`)         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)             AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)             AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)             AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)             AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)             AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))   Grades  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`grades` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),             `uni_mis`.`f`.`quiz_marks`,             0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             `uni_mis`.`f`.`assessment_marks`,             0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),             `uni_mis`.`f`.`mid_marks`,             0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),             `uni_mis`.`f`.`end_theory`,             0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),             `uni_mis`.`f`.`end_practical`,             0)) AS `final_grades`     FROM         `uni_mis`.`final_grade_temp_scaled` `f`   Mid_Exam_Overall_Marks  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`mid_exam_overall_marks` AS     SELECT          `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,         `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),             NULL) AS `mid_practical`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`     FROM         `uni_mis`.`mid_exam_marks`   Quiz_Marks_Avarage  CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)   SGPA_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa_temp` AS     SELECT          `uni_mis`.`g`.`stu_id` AS `stu_id`,         `uni_mis`.`g`.`course_id` AS `course_id`,         `uni_mis`.`g`.`final_grades` AS `final_grades`,         IF((`uni_mis`.`g`.`final_grades` >= 90),             10,             IF((`uni_mis`.`g`.`final_grades` >= 85),                 9,                 IF((`uni_mis`.`g`.`final_grades` >= 80),                     8.5,                     IF((`uni_mis`.`g`.`final_grades` >= 70),                         8,                         IF((`uni_mis`.`g`.`final_grades` >= 60),                             7,                             IF((`uni_mis`.`g`.`final_grades` >= 50),                                 6,                                 IF((`uni_mis`.`g`.`final_grades` >= 45),                                     5,                                     0))))))) AS `grade_point`     FROM         `uni_mis`.`grades` `g`  SGPA  CREATE      ALGORITHM = UNDEFINED      DEFINER = `root`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa` AS SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+Assessment Top Marks
+CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)
+CA_Eligibility
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`ca_eligibility` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,
+        `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,
+        IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+            `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,
+        IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+                ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),
+                `uni_mis`.`f`.`quiz_marks`) > 50),
+            'PASS',
+            'FAIL') AS `eligibility`
+    FROM
+        `uni_mis`.`final_grade_temp` `f`
+Final_Grade_Temp_Scaled
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp_scaled` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),
+            (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),
+            NULL,
+            (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,
+        IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1232')
+                OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),
+            (`uni_mis`.`f`.`mid_marks` * (20 / 100)),
+            NULL) AS `mid_marks`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1143')),
+            (`e`.`end_exam_theory` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                (`e`.`end_exam_theory` * (50 / 100)),
+                IF(((`e`.`course_id` = 'ICT1123')
+                        OR (`e`.`course_id` = 'ICT1133')),
+                    (`e`.`end_exam_theory` * (40 / 100)),
+                    NULL))) AS `end_theory`,
+        IF(((`e`.`course_id` = 'ICT1213')
+                OR (`e`.`course_id` = 'ICT1232')
+                OR (`e`.`course_id` = 'ICT1123')
+                OR (`e`.`course_id` = 'ICT1133')),
+            (`e`.`end_exam_practical` * (30 / 100)),
+            IF((`e`.`course_id` = 'ICT1113'),
+                NULL,
+                IF((`e`.`course_id` = 'ICT1143'),
+                    (`e`.`end_exam_practical` * (40 / 100)),
+                    NULL))) AS `end_practical`
+    FROM
+        (`uni_mis`.`final_grade_temp` `f`
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)
+            AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))
+Final_Grade_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`final_grade_temp` AS
+    SELECT 
+        `uni_mis`.`q`.`stu_id` AS `stu_id`,
+        `uni_mis`.`q`.`course_id` AS `course_id`,
+        `uni_mis`.`q`.`avg` AS `quiz_marks`,
+        ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,
+        `uni_mis`.`m`.`overall` AS `mid_marks`,
+        `e`.`end_exam_theory` AS `end_exam_theory`,
+        `e`.`end_exam_practical` AS `end_exam_practical`
+    FROM
+        (((`uni_mis`.`quiz_mark_avgs` `q`
+        JOIN `uni_mis`.`assessment_top_marks` `a`)
+        JOIN `uni_mis`.`mid_exam_overall_marks` `m`)
+        JOIN `uni_mis`.`end_exam_marks` `e`)
+    WHERE
+        ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)
+            AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)
+            AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)
+            AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)
+            AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)
+            AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)
+            AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))
+Grades
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`grades` AS
+    SELECT 
+        `uni_mis`.`f`.`stu_id` AS `stu_id`,
+        `uni_mis`.`f`.`course_id` AS `course_id`,
+        ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),
+            `uni_mis`.`f`.`quiz_marks`,
+            0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),
+            `uni_mis`.`f`.`assessment_marks`,
+            0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),
+            `uni_mis`.`f`.`mid_marks`,
+            0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),
+            `uni_mis`.`f`.`end_theory`,
+            0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),
+            `uni_mis`.`f`.`end_practical`,
+            0)) AS `final_grades`
+    FROM
+        `uni_mis`.`final_grade_temp_scaled` `f`
+Mid_Exam_Overall_Marks
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`mid_exam_overall_marks` AS
+    SELECT 
+        `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,
+        `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),
+            NULL) AS `mid_practical`,
+        IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),
+            ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),
+            `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`
+    FROM
+        `uni_mis`.`mid_exam_marks`
+Quiz_Marks_Avarage
+CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)
+SGPA_Temp
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa_temp` AS
+    SELECT 
+        `uni_mis`.`g`.`stu_id` AS `stu_id`,
+        `uni_mis`.`g`.`course_id` AS `course_id`,
+        `uni_mis`.`g`.`final_grades` AS `final_grades`,
+        IF((`uni_mis`.`g`.`final_grades` >= 90),
+            10,
+            IF((`uni_mis`.`g`.`final_grades` >= 85),
+                9,
+                IF((`uni_mis`.`g`.`final_grades` >= 80),
+                    8.5,
+                    IF((`uni_mis`.`g`.`final_grades` >= 70),
+                        8,
+                        IF((`uni_mis`.`g`.`final_grades` >= 60),
+                            7,
+                            IF((`uni_mis`.`g`.`final_grades` >= 50),
+                                6,
+                                IF((`uni_mis`.`g`.`final_grades` >= 45),
+                                    5,
+                                    0))))))) AS `grade_point`
+    FROM
+        `uni_mis`.`grades` `g`
+SGPA
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `university`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `uni_mis`.`sgpa` AS
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all
+SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+Assessment Top Marks  CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`assessment_top_marks` AS select `uni_mis`.`assessments`.`stu_id` AS `stu_id`,`uni_mis`.`assessments`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2` from (`uni_mis`.`assessments` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`assessments`.`assessment_1` AS `assessment_1` union all select `uni_mis`.`assessments`.`assessment_2` AS `assessment_2` union all select `uni_mis`.`assessments`.`assessment_3` AS `assessment_3`) `q` (`m`)) `t`) `t`)   CA_Eligibility  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`ca_eligibility` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         `uni_mis`.`f`.`quiz_marks` AS `quiz_marks`,         `uni_mis`.`f`.`assessment_marks` AS `assessment_marks`,         IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),             `uni_mis`.`f`.`quiz_marks`) AS `ca_marks`,         IF((IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),                 ((`uni_mis`.`f`.`quiz_marks` + `uni_mis`.`f`.`assessment_marks`) / 2),                 `uni_mis`.`f`.`quiz_marks`) > 50),             'PASS',             'FAIL') AS `eligibility`     FROM         `uni_mis`.`final_grade_temp` `f`   Final_Grade_Temp_Scaled  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp_scaled` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             (`uni_mis`.`f`.`quiz_marks` * (20 / 100)),             (`uni_mis`.`f`.`quiz_marks` * (10 / 100))) AS `quiz_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')),             NULL,             (`uni_mis`.`f`.`assessment_marks` * (20 / 100))) AS `assessment_marks`,         IF(((`uni_mis`.`f`.`course_id` = 'ICT1213')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1232')                 OR (`uni_mis`.`f`.`course_id` = 'ICT1113')),             (`uni_mis`.`f`.`mid_marks` * (20 / 100)),             NULL) AS `mid_marks`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1143')),             (`e`.`end_exam_theory` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 (`e`.`end_exam_theory` * (50 / 100)),                 IF(((`e`.`course_id` = 'ICT1123')                         OR (`e`.`course_id` = 'ICT1133')),                     (`e`.`end_exam_theory` * (40 / 100)),                     NULL))) AS `end_theory`,         IF(((`e`.`course_id` = 'ICT1213')                 OR (`e`.`course_id` = 'ICT1232')                 OR (`e`.`course_id` = 'ICT1123')                 OR (`e`.`course_id` = 'ICT1133')),             (`e`.`end_exam_practical` * (30 / 100)),             IF((`e`.`course_id` = 'ICT1113'),                 NULL,                 IF((`e`.`course_id` = 'ICT1143'),                     (`e`.`end_exam_practical` * (40 / 100)),                     NULL))) AS `end_practical`     FROM         (`uni_mis`.`final_grade_temp` `f`         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`e`.`course_id` = `uni_mis`.`f`.`course_id`)             AND (`e`.`stu_id` = `uni_mis`.`f`.`stu_id`))   Final_Grade_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`final_grade_temp` AS     SELECT          `uni_mis`.`q`.`stu_id` AS `stu_id`,         `uni_mis`.`q`.`course_id` AS `course_id`,         `uni_mis`.`q`.`avg` AS `quiz_marks`,         ((`uni_mis`.`a`.`max1` + `uni_mis`.`a`.`max2`) / 2) AS `assessment_marks`,         `uni_mis`.`m`.`overall` AS `mid_marks`,         `e`.`end_exam_theory` AS `end_exam_theory`,         `e`.`end_exam_practical` AS `end_exam_practical`     FROM         (((`uni_mis`.`quiz_mark_avgs` `q`         JOIN `uni_mis`.`assessment_top_marks` `a`)         JOIN `uni_mis`.`mid_exam_overall_marks` `m`)         JOIN `uni_mis`.`end_exam_marks` `e`)     WHERE         ((`uni_mis`.`q`.`stu_id` = `uni_mis`.`a`.`stu_id`)             AND (`uni_mis`.`a`.`stu_id` = `uni_mis`.`m`.`stu_id`)             AND (`uni_mis`.`m`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`stu_id` = `e`.`stu_id`)             AND (`uni_mis`.`q`.`course_id` = `uni_mis`.`a`.`course_id`)             AND (`uni_mis`.`a`.`course_id` = `uni_mis`.`m`.`course_id`)             AND (`uni_mis`.`m`.`course_id` = `e`.`course_id`)             AND (`uni_mis`.`q`.`course_id` = `e`.`course_id`))   Grades  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`grades` AS     SELECT          `uni_mis`.`f`.`stu_id` AS `stu_id`,         `uni_mis`.`f`.`course_id` AS `course_id`,         ((((IF((`uni_mis`.`f`.`quiz_marks` IS NOT NULL),             `uni_mis`.`f`.`quiz_marks`,             0) + IF((`uni_mis`.`f`.`assessment_marks` IS NOT NULL),             `uni_mis`.`f`.`assessment_marks`,             0)) + IF((`uni_mis`.`f`.`mid_marks` IS NOT NULL),             `uni_mis`.`f`.`mid_marks`,             0)) + IF((`uni_mis`.`f`.`end_theory` IS NOT NULL),             `uni_mis`.`f`.`end_theory`,             0)) + IF((`uni_mis`.`f`.`end_practical` IS NOT NULL),             `uni_mis`.`f`.`end_practical`,             0)) AS `final_grades`     FROM         `uni_mis`.`final_grade_temp_scaled` `f`   Mid_Exam_Overall_Marks  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`mid_exam_overall_marks` AS     SELECT          `uni_mis`.`mid_exam_marks`.`stu_id` AS `stu_id`,         `uni_mis`.`mid_exam_marks`.`course_id` AS `course_id`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `mid_theory`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100)),             NULL) AS `mid_practical`,         IF((`uni_mis`.`mid_exam_marks`.`mid_practical` IS NOT NULL),             ((`uni_mis`.`mid_exam_marks`.`mid_theory` * (60 / 100)) + (`uni_mis`.`mid_exam_marks`.`mid_practical` * (40 / 100))),             `uni_mis`.`mid_exam_marks`.`mid_theory`) AS `overall`     FROM         `uni_mis`.`mid_exam_marks`   Quiz_Marks_Avarage  CREATE ALGORITHM=UNDEFINED DEFINER=`university`@`localhost` SQL SECURITY DEFINER VIEW `uni_mis`.`quiz_mark_avgs` AS select `uni_mis`.`quiz_marks`.`stu_id` AS `stu_id`,`uni_mis`.`quiz_marks`.`course_id` AS `course_id`,`t`.`max1` AS `max1`,`t`.`max2` AS `max2`,`t`.`max3` AS `max3`,`t`.`avg` AS `avg` from (`uni_mis`.`quiz_marks` join lateral (select max((case `t`.`rn` when 1 then `t`.`qn` end)) AS `max1`,max((case `t`.`rn` when 2 then `t`.`qn` end)) AS `max2`,max((case `t`.`rn` when 3 then `t`.`qn` end)) AS `max3`,max((case `t`.`rn` when 4 then `t`.`qn` end)) AS `max4`,(((max((case `t`.`rn` when 1 then `t`.`qn` end)) + max((case `t`.`rn` when 2 then `t`.`qn` end))) + max((case `t`.`rn` when 3 then `t`.`qn` end))) / 3) AS `avg` from (select `q`.`m` AS `qn`,row_number() OVER (ORDER BY `q`.`m` desc )  AS `rn` from (select `uni_mis`.`quiz_marks`.`quiz_1_marks` AS `quiz_1_marks` union all select `uni_mis`.`quiz_marks`.`quiz_2_marks` AS `quiz_2_marks` union all select `uni_mis`.`quiz_marks`.`quiz_3_marks` AS `quiz_3_marks` union all select `uni_mis`.`quiz_marks`.`quiz_4_marks` AS `quiz_4_marks`) `q` (`m`)) `t`) `t`)   SGPA_Temp  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa_temp` AS     SELECT          `uni_mis`.`g`.`stu_id` AS `stu_id`,         `uni_mis`.`g`.`course_id` AS `course_id`,         `uni_mis`.`g`.`final_grades` AS `final_grades`,         IF((`uni_mis`.`g`.`final_grades` >= 90),             10,             IF((`uni_mis`.`g`.`final_grades` >= 85),                 9,                 IF((`uni_mis`.`g`.`final_grades` >= 80),                     8.5,                     IF((`uni_mis`.`g`.`final_grades` >= 70),                         8,                         IF((`uni_mis`.`g`.`final_grades` >= 60),                             7,                             IF((`uni_mis`.`g`.`final_grades` >= 50),                                 6,                                 IF((`uni_mis`.`g`.`final_grades` >= 45),                                     5,                                     0))))))) AS `grade_point`     FROM         `uni_mis`.`grades` `g`  SGPA  CREATE      ALGORITHM = UNDEFINED      DEFINER = `university`@`localhost`      SQL SECURITY DEFINER VIEW `uni_mis`.`sgpa` AS SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/400" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/401" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/402" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/403" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/404" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/405" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/406" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/407" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/408" union all SELECT s.stu_id, (SUM(s.grade_point*c.credits))/20 AS sgpa FROM sgpa_temp s, course c WHERE s.course_id=c.course_id AND s.stu_id="TG/2019/409";
+clear
+exit
+SHOW DATABASES;
+USE uni_mis;
+SHOW TABLES;
+USE uni_mis;
+SHOW TABLES;
+DESC lecturer;
+DESC student;
+DESC assesments;
+DESC assessments;
+DESC course;
+DESC medicals;
+DESC grade;
+DESC grades;
+DESC demo
+;
+DESC quiz_marks;
+DESC end_exam_marks;
+DESC mid_exam_marks;
+DESC sgpa;
+DESC attendence;
+DESC attendance;
+USE uni_mis;
+SHOW TABLES;
+DESC t_o;
+show databases;
+use uni_mis;
+show tables;
+desc student;
+desc course;
+desc course_and_student;
+desc assestments
+;
+desc attendance;
+select *from attendance;
+desc course;
+desc lecturer;
+desc course_and_lecturer;
+desc course_and_student;
+select *from attendance;
+desc assetment;
+show users;
+show user
+;
+select * from mysql.user;
+desc mysql.user;
